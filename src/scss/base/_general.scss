@@ -1,11 +1,10 @@
 body {
     box-sizing: border-box;
 }
-
 *,
 ::after,
 ::before {
-    font-family: 'Montserrat', sans-serif, cursive;
+    font-family: 'Gilroy', sans-serif, cursive;
     box-sizing: inherit;
     outline: none;
     scroll-behavior: smooth;
@@ -21,40 +20,34 @@ body {
     background: #FAFAFA;
     height: 100%;
 }
-
 .ovh {
     overflow: hidden;
 }
-
 .wrapper {
     display: flex;
     flex-direction: column;
     position: relative;
     overflow: hidden;
 }
-
 .content {
     flex: 1 0 auto;
 }
-
 .footer {
     flex: 0 0 auto;
 }
-
-// .center_block {
-//     max-width: vw(1905);
-//     width: 100%;
-//     margin-left: auto;
-//     margin-right: auto;
-//     padding-left: vw(100);
-//     padding-right: vw(100);
-//     @media all and (max-width: 1023px) {
-//         max-width: 1705px;
-//         padding-left: 20px;
-//         padding-right: 20px;
-//     }
-// }
-
+.center_block {
+    max-width: vw(1439);
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: vw(100);
+    padding-right: vw(100);
+    @media all and (max-width: 1023px) {
+        max-width: 1705px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
 img {
     max-width: 100%;
     height: auto;
@@ -63,32 +56,26 @@ img {
 textarea {
     resize: none;
 }
-
 // scrollbar
 /* width */
 *::-webkit-scrollbar {
     width: 5px;
 }
-
 /* Track */
 *::-webkit-scrollbar-track {
     background: #6CCE35;
     border-radius: 10px 0px 0px 10px;
 }
-
 /* Handle */
 *::-webkit-scrollbar-thumb {
     background: #4b802f;
     border-radius: 10px;
 }
-
 /* Handle on hover */
 *::-webkit-scrollbar-thumb:hover {
     background: #4b802f;
 }
-
 // scrollbar end
-
 .wpcf7-response-output {
     position: absolute;
     font-family: "Open Sans", sans-serif;
