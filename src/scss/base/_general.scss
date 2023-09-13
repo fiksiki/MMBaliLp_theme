@@ -36,14 +36,14 @@ body {
     flex: 0 0 auto;
 }
 .center_block {
-    max-width: vw(1439);
+    max-width: vw(1480);
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    padding-left: vw(100);
-    padding-right: vw(100);
+    padding-left: vw(20);
+    padding-right: vw(20);
     @media all and (max-width: 1023px) {
-        max-width: 1705px;
+        max-width: 100%;
         padding-left: 20px;
         padding-right: 20px;
     }
@@ -63,19 +63,29 @@ textarea {
 }
 /* Track */
 *::-webkit-scrollbar-track {
-    background: #6CCE35;
+    background: #fff;
     border-radius: 10px 0px 0px 10px;
 }
 /* Handle */
 *::-webkit-scrollbar-thumb {
-    background: #4b802f;
+    background: #0E0E0E;
     border-radius: 10px;
 }
 /* Handle on hover */
 *::-webkit-scrollbar-thumb:hover {
-    background: #4b802f;
+    background: #0E0E0E;
 }
 // scrollbar end
+.maximus_button {
+    background: #FFD130;
+    color: #0D0D0D;
+    border: 0;
+    cursor: pointer;
+    &:hover {
+        color: #FFD130;
+        background: #0D0D0D;
+    }
+}
 .wpcf7-response-output {
     position: absolute;
     font-family: "Open Sans", sans-serif;
