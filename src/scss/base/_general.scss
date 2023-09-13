@@ -1,0 +1,122 @@
+body {
+    box-sizing: border-box;
+}
+
+*,
+::after,
+::before {
+    font-family: 'Montserrat', sans-serif, cursive;
+    box-sizing: inherit;
+    outline: none;
+    scroll-behavior: smooth;
+    transition: all .3s ease;
+}
+.map-block, .map-block * {
+    transition: unset;
+}
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background: #FAFAFA;
+    height: 100%;
+}
+
+.ovh {
+    overflow: hidden;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+.content {
+    flex: 1 0 auto;
+}
+
+.footer {
+    flex: 0 0 auto;
+}
+
+// .center_block {
+//     max-width: vw(1905);
+//     width: 100%;
+//     margin-left: auto;
+//     margin-right: auto;
+//     padding-left: vw(100);
+//     padding-right: vw(100);
+//     @media all and (max-width: 1023px) {
+//         max-width: 1705px;
+//         padding-left: 20px;
+//         padding-right: 20px;
+//     }
+// }
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+textarea {
+    resize: none;
+}
+
+// scrollbar
+/* width */
+*::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+*::-webkit-scrollbar-track {
+    background: #6CCE35;
+    border-radius: 10px 0px 0px 10px;
+}
+
+/* Handle */
+*::-webkit-scrollbar-thumb {
+    background: #4b802f;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+*::-webkit-scrollbar-thumb:hover {
+    background: #4b802f;
+}
+
+// scrollbar end
+
+.wpcf7-response-output {
+    position: absolute;
+    font-family: "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    font-size: vw(14);
+    border: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    color: red;
+    width: calc(100% - vw(200)) !important;
+    @media all and (max-width: 1023px) {
+        width: 100% !important;
+        font-size: 12px;
+        bottom: 50px;
+    }
+}
+form {
+    position: relative;
+}
+.main_form {
+    .wpcf7-response-output {
+        bottom: -20px;
+    }
+}
+.modal__form--form {
+    .wpcf7-response-output {
+        width: 100% !important;
+    }
+}
