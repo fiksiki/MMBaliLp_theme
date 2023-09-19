@@ -17,7 +17,7 @@ html,
 body {
     margin: 0;
     padding: 0;
-    background: #FAFAFA;
+    background: #EDF7FF;
     height: 100%;
 }
 .ovh {
@@ -36,16 +36,29 @@ body {
     flex: 0 0 auto;
 }
 .center_block {
-    max-width: vw(1480);
+    max-width: vw(1360);
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    padding-left: vw(20);
-    padding-right: vw(20);
+    padding-left: vw(17);
+    padding-right: vw(17);
     @media all and (max-width: 1023px) {
         max-width: 100%;
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-left: 17px;
+        padding-right: 17px;
+    }
+}
+.center_block2 {
+    max-width: vw(1484);
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: vw(17);
+    padding-right: vw(17);
+    @media all and (max-width: 1023px) {
+        max-width: 100%;
+        padding-left: 17px;
+        padding-right: 17px;
     }
 }
 img {
@@ -86,6 +99,65 @@ textarea {
         background: #0D0D0D;
     }
 }
+.translate_round {
+    animation: translate_round 16s ease infinite;
+}
+@keyframes translate_round {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0)
+    }
+    50% {
+        -webkit-transform: translateY(vw(170));
+        transform: translateY(vw(170))
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0)
+    }
+}
+
+.rotate_animation {
+    animation: rotate_animation 14s ease infinite;
+}
+@keyframes rotate_animation {
+    0% {
+        -webkit-transform: rotate(20deg);
+        transform: rotate(20deg)
+    }
+    50% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0)
+    }
+    100% {
+        -webkit-transform: rotate(20deg);
+        transform: rotate(20deg)
+    }
+}
+.branch_animation {
+    animation: branch_animation 9s ease infinite;
+}
+@keyframes branch_animation {
+    0% {
+        transform: rotateX(0) translateY(100px);
+    }
+    30% {
+        transform: rotateX(30deg) translateY(100px);
+    }
+    48% {
+        transform: rotateX(-30deg) translateY(100px);
+    }
+    64% {
+        transform: rotateX(6deg) translateY(100px);
+    }
+    85% {
+        transform: rotateX(-10deg) translateY(100px);
+    }
+    100% {
+        transform: rotateX(0) translateY(100px);
+    }
+}
+
 .wpcf7-response-output {
     position: absolute;
     font-family: "Open Sans", sans-serif;

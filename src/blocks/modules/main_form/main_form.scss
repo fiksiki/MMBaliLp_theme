@@ -1,0 +1,169 @@
+.main_form {
+    padding-top: vw(92);
+    height: vw(722);
+    padding-bottom: vw(100);
+    position: relative;
+    @media all and (max-width: 1023px) {
+        padding-top: 60px;
+        padding-bottom: 120px;
+        height: auto;
+    }
+    &__leaf {
+        position: absolute;
+        font-size: 0;
+        pointer-events: none;
+        @media all and (max-width: 1023px) {
+            display: none;
+        }
+        svg {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        &--leafl {
+            bottom: vw(92);
+            left: 0;
+            width: vw(439);
+            height: vw(641);
+        }
+        &--leafr {
+            right: 0;
+            bottom: vw(90);
+            width: vw(439);
+            height: vw(641);
+        }
+    }
+    &__in {
+        display: flex;
+        justify-content: space-between;
+        @media all and (max-width: 1023px) {
+            flex-direction: column-reverse;
+        }
+    }
+    &__l-side {
+        max-width: vw(572);
+        width: 100%;
+        margin-left: vw(34);
+        @media all and (max-width: 1023px) {
+            max-width: 100%;
+            margin-left: 0;
+        }
+        form {
+            justify-content: space-between;
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+    &__title {
+        margin-bottom: vw(26);
+        color: #000;
+        font-size: vw(32);
+        font-style: normal;
+        font-weight: 600;
+        line-height: 130%;
+        text-transform: uppercase;
+        &--pc {
+            @media all and (max-width: 1023px) {
+                display: none;
+            }
+        }
+        &--mob {
+            display: none;
+            @media all and (max-width: 1023px) {
+                display: block;
+                font-size: 24px;
+                margin-bottom: 8px;
+                position: relative;
+                &:before {
+                    content: '';
+                    position: absolute;
+                    right: -17px;
+                    bottom: -70px;
+                    width: 50px;
+                    height: 114px;
+                    background: url('../img/cube_form.svg') 50% / 100% no-repeat;
+                }
+            }
+        }
+    }
+    &__text {
+        margin-bottom: vw(47);
+        color: #000;
+        font-size: vw(24);
+        font-style: normal;
+        font-weight: 500;
+        line-height: 130%;
+        @media all and (max-width: 1023px) {
+            font-size: 20px;
+            margin-bottom: 37px;
+        }
+    }
+    input {
+        &[type="text"], &[type="tel"] {
+            border: 0;
+            width: calc(50% - vw(15));
+            height: vw(50);
+            padding: vw(15) vw(30);
+            color: #636164;
+            font-size: vw(16);
+            font-style: normal;
+            font-weight: 500;
+            height: vw(50);
+            line-height: normal;
+            @media all and (max-width: 1023px) {
+                width: 100%;
+                margin-bottom: 32px;
+                font-size: 16px;
+                height: 50px;
+                padding: 15px 30px;
+            }
+        }
+        &[type="submit"] {
+            width: 100%;
+            border: 0;
+            cursor: pointer;
+            border-radius: 4px;
+            color: var(--Color_fonts_def_black, #0D0D0D);
+            text-align: center;
+            font-size: vw(16);
+            font-style: normal;
+            display: block;
+            font-weight: 600;
+            line-height: normal;
+            letter-spacing: vw(0.48);
+            padding: vw(15);
+            margin-top: vw(30);
+            &:hover {
+                color: #FFD130;
+            }
+            @media all and (max-width: 1023px) {
+                font-size: 16px;
+                padding: 15px;
+                letter-spacing: 0.48px;
+                margin-top: 0;
+            }
+        }
+    }
+    &__r-side {
+        width: calc(100% - vw(572));
+        font-size: 0;
+        pointer-events: none;
+        position: relative;
+        @media all and (max-width: 1023px) {
+            width: 100%;
+        }
+        img {
+            position: absolute;
+            min-width: vw(969);
+            height: auto;
+            left: vw(-106);
+            top: vw(-117);
+            @media all and (max-width: 1023px) {
+                min-width: unset;
+                position: unset;
+                left: unset;
+                top: unset;
+            }
+        }
+    }
+}
