@@ -1,8 +1,86 @@
 .main_quality {
+    margin-top: vw(35);
     background: #7FBAFF;
     padding-top: vw(125);
     padding-bottom: vw(158);
     position: relative;
+    overflow: hidden;
+    @media all and (max-width: 1023px) {
+        margin-top: 25px;
+        padding-top: 54px;
+        padding-bottom: 42px;
+        overflow: unset;
+    }
+    &__leaf-mob {
+        display: none;
+        @media all and (max-width: 1023px) {
+            display: block;
+            position: absolute;
+            font-size: 0;
+            right: 0;
+            top: 0px;
+            width: 183px;
+            height: 192px;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+    &__line-mob {
+        display: none;
+        @media all and (max-width: 1023px) {
+            display: block;
+            position: absolute;
+            font-size: 0;
+            left: 5px;
+            bottom: -110px;
+            width: 98px;
+            height: 192px;
+        }
+        @media all and (max-width: 380px) {
+            left: -10px;
+            bottom: -160px;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+    &__star {
+        position: absolute;
+        font-size: 0;
+        width: vw(116);
+        height: vw(113);
+        top: vw(76);
+        left: vw(397);
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        @media all and (max-width: 1023px) {
+            display: none;
+        }
+    }
+    &__line {
+        position: absolute;
+        font-size: 0;
+        width: vw(843);
+        height: vw(632);
+        top: vw(130);
+        left: vw(558);
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        @media all and (max-width: 1023px) {
+            display: none;
+        }
+    }
     &__round {
         position: absolute;
         font-size: 0;
@@ -13,7 +91,15 @@
         img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: contain;
+        }
+        @media all and (max-width: 1023px) {
+            width: 75px;
+            height: 79px;
+            bottom: 19px;
+            right: 2px;
+            left: unset;
+            top: unset;
         }
     }
     &__tree {
@@ -26,7 +112,10 @@
         img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: contain;
+        }
+        @media all and (max-width: 1023px) {
+            display: none;
         }
     }
     &__square {
@@ -39,7 +128,10 @@
         img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: contain;
+        }
+        @media all and (max-width: 1023px) {
+            display: none;
         }
     }
     &__leaf {
@@ -52,16 +144,25 @@
         img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: contain;
+        }
+        @media all and (max-width: 1023px) {
+            display: none;
         }
     }
     &__in {
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
+        @media all and (max-width: 1023px) {
+            flex-direction: column-reverse;
+        }
     }
     &__l-side {
         width: vw(509);
+        @media all and (max-width: 1023px) {
+            width: 100%;
+        }
     }
     &__title {
         margin-bottom: vw(56);
@@ -71,6 +172,21 @@
         font-weight: 1000;
         line-height: 110%;
         text-transform: uppercase;
+        &--pc {
+            @media all and (max-width: 1023px) {
+                display: none;
+            }
+        }
+        &--mob {
+            display: none;
+            @media all and (max-width: 1023px) {
+                display: block;
+            }
+        }
+        @media all and (max-width: 1023px) {
+            font-size: 43px;
+            margin-bottom: 35px;
+        }
     }
     &__subtitle {
         max-width: vw(360);
@@ -81,6 +197,11 @@
         font-style: normal;
         font-weight: 700;
         line-height: 100%;
+        @media all and (max-width: 1023px) {
+            font-size: 36px;
+            margin-bottom: 21px;
+            max-width: 360px;
+        }
     }
     &__text {
         max-width: vw(510);
@@ -90,11 +211,21 @@
         font-style: normal;
         font-weight: 500;
         line-height: 130%;
+        @media all and (max-width: 1023px) {
+            font-size: 20px;
+            max-width: 510px;
+        }
     }
     &__r-side {
         width: vw(727);
         position: relative;
         padding-top: vw(15);
+        @media all and (max-width: 1023px) {
+            width: 100%;
+            padding-top: 0;
+            max-width: 500px;
+            margin-bottom: 250px;
+        }
     }
     &__img {
         border-radius: vw(16);
@@ -104,6 +235,12 @@
         width: 100%;
         overflow: hidden;
         border: vw(4) solid #FFD130;
+        @media all and (max-width: 1023px) {
+            border-radius: 16px;
+            border: 4px solid #FFD130;
+            max-width: 500px;
+            height: auto;
+        }
         img {
             width: 100%;
             height: 100%;
@@ -116,10 +253,35 @@
         position: absolute;
         right: vw(-14);
         bottom: vw(-162);
+        cursor: pointer;
+        @media all and (max-width: 1023px) {
+            width: 250px;
+            height: 250px;
+            right: 0;
+            bottom: -205px;
+        }
         svg {
             width: 100%;
             height: 100%;
             object-fit: contain;
+            g {
+                transition: unset;
+                * {
+                    transition: unset;
+                }
+            }
+            &:hover {
+                > circle {
+                    &:nth-child(2) {
+                        fill: #0D0D0D;
+                    }
+                }
+                > path {
+                    &:nth-child(3) {
+                        stroke: #FFD130;
+                    }
+                }
+            }
         }
     }
 }
