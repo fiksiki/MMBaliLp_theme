@@ -13,11 +13,11 @@
         <main class="content">
             
             @@include('blocks/modules/main_numbers/main_numbers.html', {})
-            
-            @@include('blocks/modules/main_prefs/main_prefs.html', {})
-
-            
-            @@include('blocks/modules/block_form/block_form.html', {})
+            <div class="content__block-white">
+                @@include('blocks/modules/block_info/block_info.html', {})
+                @@include('blocks/modules/main_prefs/main_prefs.html', {})
+                @@include('blocks/modules/block_form/block_form.html', {})
+            </div>
             @@include('blocks/modules/main_quality/main_quality.html', {})
             @@include('blocks/modules/main_form/main_form.html', {})
             @@include('blocks/modules/main_maps/main_maps.html', {})

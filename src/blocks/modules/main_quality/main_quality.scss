@@ -1,12 +1,10 @@
 .main_quality {
-    margin-top: vw(35);
     background: #7FBAFF;
     padding-top: vw(125);
     padding-bottom: vw(158);
     position: relative;
     overflow: hidden;
     @media all and (max-width: 1023px) {
-        margin-top: 25px;
         padding-top: 54px;
         padding-bottom: 42px;
         overflow: unset;
