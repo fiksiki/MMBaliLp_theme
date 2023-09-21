@@ -1,10 +1,235 @@
 .block_info {
+    margin-top: vw(184);
     position: relative;
+    top: vw(-184);
+    margin-bottom: vw(-144);
+    @media all and (max-width: 1023px) {
+        margin-top: 30px;
+        margin-bottom: 35px;
+        top: unset;
+    }
+    &__round {
+        position: absolute;
+        top: vw(140);
+        left: vw(23);
+        width: vw(143);
+        height: vw(146);
+        font-size: 0;
+        z-index: 3;
+        pointer-events: none;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        @media all and (max-width: 1023px) {
+            bottom: -57px;
+            right: 30px;
+            width: 98px;
+            height: 98px;
+            left: unset;
+            top: unset;
+        }
+    }
     &__item {
         border-radius: vw(50);
         background: var(--blue, #7FBAFF);
         margin-left: vw(70);
         margin-right: vw(70);
+        position: relative;
+        overflow: hidden;
+        @media all and (max-width: 1023px) {
+            border-radius: 8px;
+            margin-left: 16px;
+            margin-right: 16px;
+        }
+    }
+    &__line {
+        position: absolute;
+        font-size: 0;
+        top: vw(70);
+        left: vw(236);
+        width: vw(80);
+        height: vw(58);
+        pointer-events: none;
+        svg {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        @media all and (max-width: 1023px) {
+            bottom: 220px;
+            left: 14px;
+            width: 80px;
+            top: unset;
+            z-index: 4;
+            height: 30px;
+        }
+    }
+    &__line2 {
+        position: absolute;
+        font-size: 0;
+        width: vw(84);
+        height: vw(45);
+        bottom: vw(11);
+        pointer-events: none;
+        left: vw(296);
+        svg {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        @media all and (max-width: 1023px) {
+            bottom: 160px;
+            left: unset;
+            right: 14px;
+            width: 80px;
+            top: unset;
+            z-index: 4;
+            height: 30px;
+        }
+    }
+    &__line3 {
+        position: absolute;
+        font-size: 0;
+        width: vw(451);
+        height: vw(148);
+        bottom: vw(30);
+        pointer-events: none;
+        left: vw(687);
+        svg {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        @media all and (max-width: 1023px) {
+            width: 100%;
+            height: 112px;
+            top: 150px;
+            bottom: unset;
+            left: 0;
+            right: 0;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='315' height='112' viewBox='0 0 315 112' fill='none'%3E%3Cpath d='M0.844838 11C0.844838 16.891 5.62047 21.6667 11.5115 21.6667C17.4025 21.6667 22.1782 16.891 22.1782 11C22.1782 5.10896 17.4025 0.333333 11.5115 0.333333C5.62047 0.333333 0.844838 5.10896 0.844838 11ZM175.936 63.0307L175.813 65.0268L175.936 63.0307ZM257.648 17.6897V15.6897V17.6897ZM44.2988 111.99C45.3977 112.101 46.3787 111.3 46.4899 110.201L48.3008 92.2926C48.412 91.1936 47.6112 90.2126 46.5122 90.1015C45.4132 89.9903 44.4323 90.7911 44.3211 91.8901L42.7114 107.809L26.7926 106.199C25.6936 106.088 24.7126 106.889 24.6015 107.988C24.4904 109.087 25.2911 110.068 26.3901 110.179L44.2988 111.99ZM9.64442 10.2831C7.52078 15.8137 10.7318 21.5943 16.9791 26.8232C23.3497 32.1554 33.5595 37.5582 47.4219 42.5923C75.1881 52.6755 118.127 61.463 175.813 65.0268L176.06 61.0345C118.611 57.4852 76.0789 48.7434 48.7872 38.8325C35.1206 33.8695 25.4047 28.6591 19.5464 23.7559C13.5648 18.7493 12.2438 14.6723 13.3786 11.7169L9.64442 10.2831ZM175.813 65.0268C210.532 67.1718 239.453 65.4036 261.728 61.5225C283.923 57.6552 299.75 51.6506 308.071 45.1407C312.203 41.9074 314.856 38.2511 314.994 34.3605C315.137 30.3354 312.584 26.9228 308.324 24.2771C304.057 21.6266 297.729 19.4964 289.378 18.019C280.997 16.5364 270.45 15.6896 257.648 15.6897V19.6897C270.288 19.6896 280.592 20.5268 288.681 21.9578C296.8 23.3941 302.562 25.4071 306.214 27.6751C309.873 29.948 311.068 32.2291 310.997 34.2186C310.922 36.3426 309.4 39.0217 305.606 41.9903C298.073 47.8842 283.038 53.7492 261.041 57.5819C239.123 61.4009 210.52 63.1634 176.06 61.0345L175.813 65.0268ZM257.648 15.6897C220.445 15.6898 151.964 20.3977 100.219 34.3514C74.4294 41.3059 52.381 50.66 40.5966 63.199C34.6433 69.5335 31.2168 76.7819 31.3882 84.9728C31.5586 93.1186 35.2813 101.87 42.9507 111.265L46.0493 108.735C38.7187 99.7552 35.5327 91.8404 35.3873 84.8892C35.2428 77.9831 38.0933 71.7033 43.5113 65.9384C54.4694 54.2787 75.5409 45.149 101.26 38.2134C152.533 24.387 220.626 19.6898 257.648 19.6897V15.6897Z' fill='white'/%3E%3C/svg%3E") 50% / 315px no-repeat;
+            svg {
+                display: none;
+            }
+        }
+        @media all and (max-width: 630px) {
+            top: 190px;
+        }
+        @media all and (max-width: 560px) {
+            top: 230px;
+        }
+        @media all and (max-width: 400px) {
+            background-size: 200px;
+            top: 250px;
+        }
+    }
+    &__star {
+        position: absolute;
+        font-size: 0;
+        bottom: vw(12);
+        right: vw(674);
+        width: vw(112);
+        pointer-events: none;
+        height: vw(109);
+        svg {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        @media all and (max-width: 1023px) {
+            width: 57px;
+            height: 57px;
+            bottom: unset;
+            right: 20px;
+            top: 310px;
+        }
+    }
+    &__tree {
+        position: absolute;
+        font-size: 0;
+        top: 0;
+        pointer-events: none;
+        left: 0;
+        width: vw(341);
+        height: vw(363);
+        z-index: 1;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        @media all and (max-width: 1023px) {
+            transform: rotate(90deg);
+            left: unset;
+            right: 0;
+            width: 150px;
+            height: 150px;
+            top: -10px;
+        }
+    }
+    &__house {
+        position: absolute;
+        font-size: 0;
+        width: vw(465);
+        height: vw(415);
+        left: 0;
+        pointer-events: none;
+        z-index: 0;
+        bottom: 0;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        @media all and (max-width: 1023px) {
+            width: 361px;
+            height: 322px;
+            z-index: 2;
+        }
+    }
+    &__tree2 {
+        position: absolute;
+        font-size: 0;
+        right: 0;
+        bottom: 0;
+        width: vw(313);
+        height: vw(415);
+        pointer-events: none;
+        z-index: 1;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        @media all and (max-width: 1023px) {
+            left: 30px;
+            z-index: 0;
+            bottom: -20px;
+            width: 270px;
+            height: 310px;
+            right: unset;
+            transform: rotate(45deg);
+        }
+    }
+    &__umbrella {
+        position: absolute;
+        font-size: 0;
+        bottom: 0;
+        right: vw(20);
+        pointer-events: none;
+        width: vw(241);
+        height: vw(154);
+        z-index: 0;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        @media all and (max-width: 1023px) {
+            display: none;
+        }
     }
     &__in {
         position: relative;
@@ -20,6 +245,8 @@
             max-width: 100%;
             padding-left: 17px;
             padding-right: 17px;
+            padding-top: 50px;
+            padding-bottom: 258px;
         }
     }
     &__title {
@@ -31,19 +258,26 @@
         text-transform: uppercase;
         max-width: vw(760);
         width: 100%;
+        @media all and (max-width: 1023px) {
+            max-width: 100%;
+            font-size: 43px;
+            margin-bottom: 95px;
+            padding-right: 70px;
+        }
     }
     &__link {
         width: vw(314);
         height: vw(314);
         position: absolute;
-        right: vw(-14);
-        bottom: vw(-162);
+        right: vw(-75);
+        bottom: vw(54);
         cursor: pointer;
         @media all and (max-width: 1023px) {
             width: 250px;
             height: 250px;
-            right: 0;
-            bottom: -205px;
+            position: unset;
+            margin-left: auto;
+            margin-right: auto;
         }
         svg {
             width: 100%;

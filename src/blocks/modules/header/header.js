@@ -1,7 +1,5 @@
 const Header = class Header {
-    constructor({someVareible}){
-        this.someVareible = someVareible;
-    }
+    constructor(){}
     someMethod() {
         console.log(this.someVareible);
     }

@@ -1,0 +1,106 @@
+.block_steps {
+    padding-top: vw(50);
+    padding-bottom: vw(75);
+    @media all and (max-width: 1023px) {
+        padding-top: 50px;
+        padding-bottom: 30px;
+    }
+    &__item {
+        border-radius: vw(8);
+        overflow: hidden;
+        display: flex;
+        background: #FAFAFA;
+        @media all and (max-width: 1023px) {
+            border-radius: 8px;
+            flex-direction: column;
+            overflow: unset;
+        }
+    }
+    &__l-side {
+        width: vw(460);
+        flex: 0 0 vw(460);
+        background: #7FBAFF;
+        padding: vw(46) vw(120) vw(46) vw(68);
+        position: relative;
+        @media all and (max-width: 1023px) {
+            width: 100%;
+            flex: none;
+            padding: 30px 16px;
+            border-radius: 8px;
+        }
+    }
+    &__gift {
+        position: absolute;
+        right: vw(-45);
+        top: vw(30);
+        pointer-events: none;
+        font-size: 0;
+        width: vw(295);
+        height: vw(197);
+        pointer-events: none;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        &--pc {
+            @media all and (max-width: 1023px) {
+                display: none;
+            }
+        }
+        &--mob {
+            display: none;
+            @media all and (max-width: 1023px) {
+                display: block;
+            }
+        }
+        @media all and (max-width: 1023px) {
+            width: 174px;
+            height: 171px;
+            top: -25px;
+            right: -30px;
+        }
+    }
+    &__title {
+        margin-bottom: vw(24);
+        color: #FFF;
+        font-size: vw(32);
+        font-style: normal;
+        font-weight: 600;
+        line-height: 130%;
+        text-transform: uppercase;
+        @media all and (max-width: 1023px) {
+            padding-right: 84px;
+            font-size: 20px;
+            margin-bottom: 16px;
+        }
+    }
+    &__text {
+        color: #FFF;
+        font-size: vw(16);
+        font-style: normal;
+        font-weight: 400;
+        line-height: 130%;
+        @media all and (max-width: 1023px) {
+            font-size: 14px;
+            padding-right: 84px;
+        }
+    }
+    &__r-side {
+        width: 100%;
+        padding: vw(55) vw(50);
+        @media all and (max-width: 1023px) {
+            padding: 24px 17px 40px 17px;
+        }
+    }
+    &__tit {
+        color: #000;
+        font-size: vw(24);
+        font-style: normal;
+        font-weight: 500;
+        line-height: 145%;
+        @media all and (max-width: 1023px) {
+            font-size: 24px;
+        }
+    }
+}
