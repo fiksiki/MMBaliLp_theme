@@ -1,4 +1,6 @@
 .header {
+    position: relative;
+    z-index: 10;
     .scalebeat {
         animation:  2s ease-out 0s infinite alternate scalebeat;
     }
@@ -30,8 +32,8 @@
         }
     }
     &__top {
-        padding-top: vw(40);
-        padding-bottom: vw(30);
+        padding-top: vw(33);
+        padding-bottom: vw(22);
         border-bottom: 1px solid #0D0D0D;
         display: flex;
         justify-content: space-between;

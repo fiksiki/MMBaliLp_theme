@@ -14,6 +14,7 @@
         position: absolute;
         height: vw(424);
         top: vw(-180);
+        z-index: 1;
         pointer-events: none;
         @media all and (max-width: 1023px) {
             background-position: 50% 100%;
@@ -35,6 +36,7 @@
         position: absolute;
         pointer-events: none;
         font-size: 0;
+        z-index: 2;
         img {
             object-fit: contain;
             width: 100%;
@@ -124,6 +126,7 @@
         height: vw(314);
         position: absolute;
         right: vw(-118);
+        z-index: 2;
         top: vw(-65);
         cursor: pointer;
         @media all and (max-width: 1023px) {

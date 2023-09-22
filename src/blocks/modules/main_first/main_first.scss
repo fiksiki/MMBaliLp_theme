@@ -2,8 +2,158 @@
     height: 100%;
     display: flex;
     align-items: center;
+    &__house, &__sea, &__leafl, &__leafr, &__leaftl, &__leaftr, &__round {
+        font-size: 0;
+        pointer-events: none;
+        position: absolute;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
     &__in {
-
+        position: relative;
+        z-index: 3;
+        margin-bottom: vw(174);
+        @media all and (max-width: 1023px) {
+            margin-bottom: 0;
+            height: auto;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            padding-top: 150px;
+            padding-bottom: 210px;
+        }
+    }
+    &__house {
+        width: vw(969);
+        height: vw(787);
+        right: 0;
+        bottom: 15px;
+        z-index: 1;
+        @media all and (max-width: 1023px) {
+            width: 788px;
+            height: 591px;
+            right: -290px;
+            bottom: -15px;
+        }
+    }
+    &__sea {
+        width: vw(1920);
+        height: vw(630);
+        bottom: vw(-30);
+        left: 0;
+        right: 0;
+        z-index: 0;
+        img {
+            object-fit: cover;
+        }
+        @media all and (max-width: 1023px) {
+            height: 460px;
+            width: 1023px;
+        }
+    }
+    &__leafl {
+        width: vw(514);
+        height: vw(504);
+        left: vw(-80);
+        bottom: vw(0);
+        z-index: 2;
+        @media all and (max-width: 1023px) {
+            width: 168px;
+            height: 179px;
+            z-index: 1;
+            bottom: 0;
+            bottom: 4%;
+            left: -8px;
+            animation: unset;
+        }
+        @media all and (max-width: 480px) {
+            bottom: -2%;
+        }
+        &--pc {
+            @media all and (max-width: 1023px) {
+                display: none;
+            }
+        }
+        &--mob {
+            display: none;
+            @media all and (max-width: 1023px) {
+                display: block;
+            }
+        }
+    }
+    &__leafr {
+        width: vw(510);
+        height: vw(504);
+        right: vw(-4);
+        bottom: vw(20);
+        z-index: 2;
+        @media all and (max-width: 1023px) {
+            width: 168px;
+            height: 179px;
+            right: -10px;
+            z-index: 1;
+            bottom: 4%;
+            animation: unset;
+        }
+        @media all and (max-width: 480px) {
+            bottom: 0%;
+        }
+        &--pc {
+            @media all and (max-width: 1023px) {
+                display: none;
+            }
+        }
+        &--mob {
+            display: none;
+            @media all and (max-width: 1023px) {
+                display: block;
+            }
+        }
+    }
+    &__leaftl {
+        width: vw(270);
+        height: vw(270);
+        top: vw(-150);
+        left: 0;
+        z-index: 3;
+        @media all and (max-width: 1023px) {
+            width: 111px;
+            height: 118px;
+            top: -110px;
+        }
+    }
+    &__leaftr {
+        width: vw(273);
+        height: vw(270);
+        top: vw(-150);
+        right: 0;
+        z-index: 3;
+        @media all and (max-width: 1023px) {
+            width: 193px;
+            height: 205px;
+            top: -110px;
+        }
+        &--pc {
+            @media all and (max-width: 1023px) {
+                display: none;
+            }
+        }
+        &--mob {
+            display: none;
+            @media all and (max-width: 1023px) {
+                display: block;
+            }
+        }
+    }
+    &__round {
+        width: vw(144);
+        height: vw(144);
+        top: vw(67);
+        left: vw(8);
+        z-index: 1;
     }
     &__title {
         color: var(--Color_fonts_def_black, #0D0D0D);
@@ -15,6 +165,11 @@
         margin-bottom: vw(27);
         max-width: vw(720);
         width: 100%;
+        @media all and (max-width: 1023px) {
+            max-width: 720px;
+            font-size: 59px;
+            margin-bottom: 19px;
+        }
     }
     &__text {
         max-width: vw(572);
@@ -25,6 +180,11 @@
         font-weight: 600;
         line-height: 90%;
         margin-bottom: vw(46);
+        @media all and (max-width: 1023px) {
+            font-size: 36px;
+            margin-bottom: auto;
+            max-width: 572px;
+        }
     }
     &__btn {
         border-radius: 8px;
@@ -38,5 +198,12 @@
         line-height: normal;
         letter-spacing: vw(0.6);
         padding: vw(16);
+        @media all and (max-width: 1023px) {
+            font-size: 20px;
+            max-width: 100%;
+            padding: 16px;
+            letter-spacing: 0.6px;
+            margin-top: 20px;
+        }
     }
 }
