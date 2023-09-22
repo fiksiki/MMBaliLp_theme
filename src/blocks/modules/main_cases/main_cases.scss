@@ -1,6 +1,45 @@
 .main_cases {
     padding-top: vw(40);
     padding-bottom: vw(20);
+    position: relative;
+    &__leaf {
+        position: absolute;
+        font-size: 0;
+        pointer-events: none;
+        @media all and (max-width: 1023px) {
+            display: none;
+        }
+        svg {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        &--leafl {
+            bottom: vw(230);
+            left: 0;
+            width: vw(439);
+            height: vw(641);
+            @media all and (max-width: 1023px) {
+                bottom: 20%;
+                width: 194px;
+                height: 119px;
+                left: 0;
+            }
+        }
+        &--leafr {
+            right: vw(-210);
+            bottom: vw(-230);
+            width: vw(439);
+            height: vw(641);
+            @media all and (max-width: 1023px) {
+                top: 165px;
+                bottom: unset;
+                width: 194px;
+                height: 119px;
+                right: 0;
+            }
+        }
+    }
     @media all and (max-width: 1023px) {
         padding-top: 30px;
         padding-bottom: 50px;

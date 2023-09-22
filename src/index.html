@@ -9,9 +9,12 @@
 </head>
 <body>
     <div class="wrapper" id="app" :class="{isMobile, isTablet}">
-        @@include('blocks/modules/header/header.html', {})
+        <div class="content__top" style="background: url('./img/bg_first.jpg') 0 0 / cover no-repeat;">
+            @@include('blocks/modules/header/header.html', {})
+            @@include('blocks/modules/main_first/main_first.html', {})
+        </div>
         <main class="content">
-            
+            @@include('blocks/modules/block_why/block_why.html', {})
             @@include('blocks/modules/main_numbers/main_numbers.html', {})
             @@include('blocks/modules/main_services/main_services.html', {})
             @@include('blocks/modules/main_cases/main_cases.html', {})

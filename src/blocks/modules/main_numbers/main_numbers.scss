@@ -1,6 +1,6 @@
 .main_numbers {
     position: relative;
-    &__around, &__tree, &__round, &__round2, &__tree2 {
+    &__around, &__tree, &__round, &__round2, &__tree2, &__tree3 {
         position: absolute;
         font-size: 0;
         pointer-events: none;
@@ -13,18 +13,60 @@
     &__around {
         width: vw(281);
         height: vw(247);
+        z-index: 1;
+        left: vw(-108);
+        top: vw(168);
+        @media all and (max-width: 1023px) {
+            display: none;
+        }
     }
     &__tree {
         width: vw(491);
         height: vw(487);
+        z-index: 1;
+        bottom: vw(40);
+        left: vw(-150);
+        @media all and (max-width: 1023px) {
+            left: -90px;
+            width: 251px;
+            height: 198px;
+            top: 168px;
+            z-index: 3;
+        }
+    }
+    &__tree3 {
+        display: none;
+        z-index: 3;
+        @media all and (max-width: 1023px) {
+            display: block;
+            width: 131px;
+            height: 128px;
+            bottom: 355px;
+            right: 0;
+        }
     }
     &__round {
         width: vw(143);
         height: vw(146);
+        right: vw(7);
+        z-index: 1;
+        top: vw(95);
+        @media all and (max-width: 1023px) {
+            width: 70px;
+            height: 70px;
+            left: 53px;
+            top: -35px;
+        }
     }
     &__round2 {
         width: vw(88);
         height: vw(88);
+        z-index: 1;
+        top: vw(-47);
+        right: vw(454);
+        @media all and (max-width: 1023px) {
+            display: none;
+        }
     }
     &__tree2 {
         width: vw(313);
@@ -32,6 +74,9 @@
         right: 0;
         bottom: 0;
         z-index: 1;
+        @media all and (max-width: 1023px) {
+            display: none;
+        }
     }
     &__ins {
         position: relative;
@@ -39,15 +84,23 @@
         margin: vw(50) vw(70);
         background: #7FBAFF;
         border-radius: vw(50);
+        @media all and (max-width: 1023px) {
+            border-radius: 16px;
+            margin-bottom: 30px;
+            margin-top: 30px;
+        }
         &:before {
             content: '';
             position: absolute;
             right: 0;
-            height: 4px;
+            height: vw(4);
             width: 100%;
             top: vw(177);
             background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1443' height='4' viewBox='0 0 1443 4' fill='none'%3E%3Cpath d='M0 2L1443 2.00013' stroke='%23FFD130' stroke-width='3' stroke-dasharray='10 10'/%3E%3C/svg%3E") 100% 0 no-repeat;
             z-index: 0;
+            @media all and (max-width: 1023px) {
+                display: none;
+            }
         }
         &:after {
             content: '';
@@ -58,18 +111,31 @@
             bottom: vw(262);
             background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1443' height='4' viewBox='0 0 1443 4' fill='none'%3E%3Cpath d='M0 2L1443 2.00013' stroke='%23FFD130' stroke-width='3' stroke-dasharray='10 10'/%3E%3C/svg%3E") 100% 0 no-repeat;
             z-index: 0;
+            @media all and (max-width: 1023px) {
+                display: none;
+            }
         }
     }
     &__in {
         overflow: hidden;
         padding-top: vw(126);
         padding-bottom: vw(0);
+        @media all and (max-width: 1023px) {
+            padding-top: 40px;
+            padding-bottom: 50px;
+        }
     }
     &__blocks {
         display: flex;
         flex-wrap: wrap;
         margin-left: vw(-20);
         margin-right: vw(-20);
+        @media all and (max-width: 1023px) {
+            margin-left: 0;
+            margin-right: 0;
+            flex-direction: column;
+            align-items: center;
+        }
     }
     &__block {
         margin-left: vw(20);
@@ -80,6 +146,26 @@
         position: relative;
         z-index: 2;
         align-items: flex-start;
+        @media all and (max-width: 1023px) {
+            flex-direction: column;
+            align-items: center;
+            margin-left: 0;
+            margin-right: 0;
+            width: 100%;
+            margin-bottom: 32px;
+            text-align: center;
+            &:before {
+                content: '';
+                position: absolute;
+                top: 40px;
+                left: -17px;
+                right: -17px;
+                width: calc(100% + 34px);
+                height: 3px;
+                background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='358' height='4' viewBox='0 0 358 4' fill='none'%3E%3Cpath d='M0 2L358 1.99997' stroke='%23FFD130' stroke-width='3' stroke-dasharray='10 10'/%3E%3C/svg%3E") 50% 50%;
+                z-index: 0;
+            }
+        }
     }
     &__l-side {
         width: vw(80);
@@ -88,7 +174,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        border: 7px solid #FFD130;
+        border: vw(7) solid #FFD130;
         color: #FFD130;
         background: #7FBAFF;
         font-size: vw(24);
@@ -97,6 +183,16 @@
         line-height: 100%;
         flex: 0 0 vw(80);
         margin-right: vw(20);
+        @media all and (max-width: 1023px) {
+            flex: none;
+            width: 80px;
+            height: 80px;
+            z-index: 1;
+            margin-bottom: 32px;
+            border: 7px solid #FFD130;
+            font-size: 24px;
+            margin-right: 0;
+        }
     }
     &__title {
         margin-bottom: vw(24);
@@ -106,6 +202,10 @@
         font-weight: 600;
         line-height: 130%;
         text-transform: uppercase;
+        @media all and (max-width: 1023px) {
+            font-size: 24px;
+            margin-bottom: 16px;
+        }
     }
     &__text {
         color: var(--Color_fonts_def_black, #0D0D0D);
@@ -113,5 +213,8 @@
         font-style: normal;
         font-weight: 500;
         line-height: 130%;
+        @media all and (max-width: 1023px) {
+            font-size: 18px;
+        }
     }
 }
