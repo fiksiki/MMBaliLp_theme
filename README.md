@@ -2,7 +2,7 @@
 
 ## :zap: Установка
 * установите [NodeJS](https://nodejs.org/en/) ***lts*** (на момент создания сборщика v16.13.2)
-* скачайте сборку в консоли с помощью [Git](https://git-scm.com/downloads): ```git clone git@bitbucket.org:osminozhka/gulp-builder.git #имя_проекта```
+* скачайте сборку в консоли с помощью [Git](https://git-scm.com/downloads): ```git clone git@bitbucket.org:fiksiki/gulp-builder.git #имя_проекта```
 * перейдите в скачанную папку со сборкой: ```cd #имя_проекта```
 * скачайте необходимые зависимости: ```npm install```
 * чтобы начать работу, введите команду: ```npm run dev``` (режим разработки)
@@ -16,12 +16,12 @@
 gulp-html-starter
 ├── dist
 ├── src
-│   ├── blocks
-│   ├── files
-│   ├── fonts
-│   ├── img
-│   ├── js
-│   ├── scss
+│   ├── blocks
+│   ├── files
+│   ├── fonts
+│   ├── img
+│   ├── js
+│   ├── scss
 ├── .env_example
 ├── package.json
 ├── gulpfile.js
@@ -65,10 +65,10 @@ gulp-html-starter
 ```
 blocks
 ├── modules
-│   ├── header
-│   │   ├── header.html
-│   │   ├── header.js
-│   │   ├── header.scss
+│   ├── header
+│   │   ├── header.html
+│   │   ├── header.js
+│   │   ├── header.scss
 ```
 
 ### Компоненты
