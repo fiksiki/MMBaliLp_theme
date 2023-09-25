@@ -112,6 +112,8 @@
         margin-bottom: vw(157);
         max-width: vw(760);
         width: 100%;
+        position: relative;
+        z-index: 2;
         @media all and (max-width: 1023px) {
             font-size: 32px;
             margin-bottom: 35px;
