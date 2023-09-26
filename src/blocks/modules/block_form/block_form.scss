@@ -6,6 +6,9 @@
         padding-bottom: 50px;
         padding-top: 42px;
     }
+    &__done {
+        display: none;
+    }
     &__in {
         border-radius: vw(16);
         background: var(--blue, #7FBAFF);
@@ -19,6 +22,21 @@
             padding-top: 33px;
             padding-bottom: 46px;
             border-radius: 8px;
+        }
+        &.isSent {
+            @media all and (max-width: 1023px) {
+                padding-top: 190px;
+            }
+            form {
+                display: none;
+            }
+            .block_form__done {
+                display: block;
+                @media all and (max-width: 1023px) {
+                    position: relative;
+                    top: 50px;
+                }
+            }
         }
     }
     &__item {
@@ -183,6 +201,21 @@
         display: flex;
         justify-content: space-between;
         padding-right: vw(35);
+        p {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            @media all and (max-width: 1023px) {
+                flex-direction: column;
+            }
+            > span {
+                width: vw(271);
+                display: block;
+                @media all and (max-width: 1023px) {
+                    width: 100%;
+                }
+            }
+        }
         @media all and (max-width: 1023px) {
             padding-right: 0;
             flex-direction: column;

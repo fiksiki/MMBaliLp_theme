@@ -33,11 +33,76 @@
             height: vw(641);
         }
     }
+    &__done {
+        display: none;
+    }
     &__in {
         display: flex;
         justify-content: space-between;
         @media all and (max-width: 1023px) {
             flex-direction: column-reverse;
+        }
+        &.isSent {
+            @media all and (max-width: 1023px) {
+                .main_form__title--mob {
+                    display: none;
+                }
+                .main_form__title {
+                    font-size: 24px;
+                }
+            }
+            form {
+                display: none;
+            }
+            .main_form__done {
+                display: block;
+            }
+        }
+    }
+    input {
+        &[type="text"], &[type="tel"] {
+            border: 0;
+            // width: calc(50% - vw(15));
+            height: vw(50);
+            padding: vw(15) vw(30);
+            color: #636164;
+            font-size: vw(16);
+            font-style: normal;
+            font-weight: 500;
+            height: vw(50);
+            line-height: normal;
+            @media all and (max-width: 1023px) {
+                width: 100%;
+                margin-bottom: 32px;
+                font-size: 16px;
+                height: 50px;
+                padding: 15px 30px;
+            }
+        }
+        &[type="submit"] {
+            width: 100%;
+            border: 0;
+            cursor: pointer;
+            border-radius: 4px;
+            color: var(--Color_fonts_def_black, #0D0D0D);
+            text-align: center;
+            font-size: vw(16);
+            font-style: normal;
+            display: block;
+            font-weight: 600;
+            line-height: normal;
+            letter-spacing: vw(0.48);
+            padding: vw(15);
+            margin-top: vw(30);
+            &:hover {
+                color: #FFD130;
+            }
+            @media all and (max-width: 1023px) {
+                font-size: 16px;
+                padding: 15px;
+                letter-spacing: 0.48px;
+                margin-top: 0;
+            }
         }
     }
     &__l-side {
@@ -52,6 +117,20 @@
             justify-content: space-between;
             display: flex;
             flex-wrap: wrap;
+            p {
+                justify-content: space-between;
+                display: flex;
+                flex-wrap: wrap;
+                > span {
+                    width: calc(50% - vw(15));
+                    input {
+                        width: 100%;
+                    }
+                    @media all and (max-width: 1023px) {
+                        width: 100%;
+                    }
+                }
+            }
         }
     }
     &__title {
@@ -96,52 +175,6 @@
         @media all and (max-width: 1023px) {
             font-size: 20px;
             margin-bottom: 37px;
-        }
-    }
-    input {
-        &[type="text"], &[type="tel"] {
-            border: 0;
-            width: calc(50% - vw(15));
-            height: vw(50);
-            padding: vw(15) vw(30);
-            color: #636164;
-            font-size: vw(16);
-            font-style: normal;
-            font-weight: 500;
-            height: vw(50);
-            line-height: normal;
-            @media all and (max-width: 1023px) {
-                width: 100%;
-                margin-bottom: 32px;
-                font-size: 16px;
-                height: 50px;
-                padding: 15px 30px;
-            }
-        }
-        &[type="submit"] {
-            width: 100%;
-            border: 0;
-            cursor: pointer;
-            border-radius: 4px;
-            color: var(--Color_fonts_def_black, #0D0D0D);
-            text-align: center;
-            font-size: vw(16);
-            font-style: normal;
-            display: block;
-            font-weight: 600;
-            line-height: normal;
-            letter-spacing: vw(0.48);
-            padding: vw(15);
-            margin-top: vw(30);
-            &:hover {
-                color: #FFD130;
-            }
-            @media all and (max-width: 1023px) {
-                font-size: 16px;
-                padding: 15px;
-                letter-spacing: 0.48px;
-                margin-top: 0;
-            }
         }
     }
     &__r-side {

@@ -35,6 +35,10 @@ const Modals = class Modals {
                 event.preventDefault();
                 this.closeModal(document.querySelector(`[${this.modalsSelector}].isOpened`).dataset.modal);
             }
+            if (event.target.closest('.modal__close')) {
+                event.preventDefault();
+                this.closeModal(document.querySelector(`[${this.modalsSelector}].isOpened`).dataset.modal);
+            }
         })
     }
     addKeyupListener() {

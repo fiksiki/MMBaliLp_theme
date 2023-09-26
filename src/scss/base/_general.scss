@@ -8,7 +8,7 @@ body {
     box-sizing: inherit;
     outline: none;
     scroll-behavior: smooth;
-    transition: all .3s ease;
+    // transition: all .3s ease;
 }
 .map-block, .map-block * {
     transition: unset;
@@ -49,8 +49,8 @@ body {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    padding-left: vw(17);
-    padding-right: vw(17);
+    padding-left: 17px;
+    padding-right: 17px;
     @media all and (max-width: 1023px) {
         max-width: 100%;
         padding-left: 17px;
@@ -128,6 +128,7 @@ textarea {
     background: #FFD130;
     color: #0D0D0D;
     border: 0;
+    transition: all .3s ease;
     cursor: pointer;
     &:hover {
         color: #FFD130;
@@ -211,8 +212,14 @@ textarea {
         bottom: 50px;
     }
 }
+.wpcf7-spinner {
+    display: none !important;
+}
 form {
     position: relative;
+    p {
+        margin: 0;
+    }
 }
 .main_form {
     .wpcf7-response-output {
@@ -222,5 +229,10 @@ form {
 .modal__form--form {
     .wpcf7-response-output {
         width: 100% !important;
+    }
+}
+svg {
+    * {
+        transition: all .3s ease;
     }
 }

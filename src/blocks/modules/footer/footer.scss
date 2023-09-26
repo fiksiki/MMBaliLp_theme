@@ -149,6 +149,8 @@
     }
     &__logo {
         font-size: 0;
+        text-decoration: none;
+        display: block;
         img {
             width: 100%;
         }

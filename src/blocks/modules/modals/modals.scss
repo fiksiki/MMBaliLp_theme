@@ -5,11 +5,12 @@
     right: 0;
     bottom: 0;
     text-align: center;
-    background: rgba(0, 0, 0, .9);
+    background: rgba(0, 0, 0, .5);
     z-index: 200;
     opacity: 0;
     visibility: hidden;
     transition: all .3s ease;
+    padding: 16px;
     &.isOpened {
         opacity: 1;
         visibility: visible;
@@ -20,12 +21,271 @@
         vertical-align: middle;
         height: 100%;
     }
+    &__done {
+        max-width: vw(345);
+        width: 100%;
+        margin-left: auto;
+        position: relative;
+        z-index: 2;
+        display: none;
+        @media all and (max-width: 1023px) {
+            max-width: 100%;
+        }
+    }
+    &__close {
+        width: 100%;
+        cursor: pointer;
+        border-radius: 4px;
+        color: var(--Color_fonts_def_black, #0D0D0D);
+        text-align: center;
+        font-size: vw(16);
+        font-style: normal;
+        display: block;
+        font-weight: 600;
+        line-height: normal;
+        letter-spacing: vw(0.48);
+        padding: vw(15);
+        margin-top: vw(36);
+        &:hover {
+            color: #FFD130;
+        }
+        @media all and (max-width: 1023px) {
+            font-size: 16px;
+            padding: 15px;
+            letter-spacing: 0.48px;
+            margin-top: 0;
+            margin-top: 68px;
+        }
+    }
     &__in {
         display: inline-block;
         vertical-align: middle;
         width: 100%;
-        max-width: 320px;
-        padding: vw(20);
+        overflow: hidden;
+        max-width: vw(770);
+        padding: vw(58) vw(100) vw(58) vw(20);
         background: #fff;
+        border-radius: vw(16);
+        background: #7FBAFF;
+        text-align: left;
+        position: relative;
+        @media all and (max-width: 1023px) {
+            max-width: 770px;
+            padding: 243px 25px 49px 25px;
+            border-radius: 16px;
+        }
+        form {
+            max-width: vw(345);
+            width: 100%;
+            margin-left: auto;
+            position: relative;
+            z-index: 2;
+            @media all and (max-width: 1023px) {
+                max-width: 100%;
+            }
+        }
+        &.isSent {
+            form {
+                display: none;
+            }
+            .modal__done {
+                display: block;
+            }
+        }
+    }
+    &__tree, &__star, &__line, &__line2, &__line3, &__circle, &__circle2, &__circle3 {
+        font-size: 0;
+        position: absolute;
+        pointer-events: none;
+    }
+    &__tree {
+        background: url('../img/tree2.png') 50% / 100% no-repeat;
+        top: vw(-10);
+        left: vw(-10);
+        width: vw(164);
+        height: vw(175);
+        @media all and (max-width: 1023px) {
+            width: 164px;
+            height: 175px;
+            top: -5px;
+            left: -5px;
+        }
+    }
+    &__star {
+        width: vw(70);
+        height: vw(70);
+        background: url('../img/star.svg') 50% / 100% no-repeat;
+        left: vw(144);
+        top: vw(8);
+        @media all and (max-width: 1023px) {
+            display: none;
+        }
+    }
+    &__line {
+        top: vw(14);
+        right: vw(106);
+        width: vw(41);
+        height: vw(31);
+        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='41' height='31' viewBox='0 0 41 31' fill='none'%3E%3Cpath d='M3.44052 29.9042L7.14195 15.3217L21.7244 19.0231L25.4259 4.44064L40.0083 8.14208' stroke='%23FFD130' stroke-width='6'/%3E%3C/svg%3E") 50% / 100% no-repeat;
+        @media all and (max-width: 1023px) {
+            width: 41px;
+            height: 31px;
+            top: 195px;
+            right: 24px;
+        }
+    }
+    &__line2 {
+        top: vw(115);
+        right: vw(52);
+        width: vw(48);
+        height: vw(20);
+        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='20' viewBox='0 0 48 20' fill='none'%3E%3Cpath d='M3 15.6384L13.6384 5L24.2767 15.6384L34.9151 5L45.5534 15.6384' stroke='%23FFD130' stroke-width='6'/%3E%3C/svg%3E") 50% / 100% no-repeat;
+        @media all and (max-width: 1023px) {
+            display: none;
+        }
+    }
+    &__line3 {
+        bottom: vw(70);
+        right: vw(80);
+        width: vw(41);
+        height: vw(31);
+        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='41' height='31' viewBox='0 0 41 31' fill='none'%3E%3Cpath d='M37.5673 29.9037L33.8659 15.3212L19.2834 19.0226L15.582 4.44015L0.999479 8.14159' stroke='%23FFD130' stroke-width='6'/%3E%3C/svg%3E") 50% / 100% no-repeat;
+        @media all and (max-width: 1023px) {
+            bottom: 92px;
+            right: 15px;
+            width: 41px;
+            height: 31px;
+        }
+    }
+    &__circle {
+        width: vw(242);
+        height: vw(242);
+        left: vw(-27);
+        bottom: vw(-65);
+        background: url('../img/round2.svg') 50% / 100% no-repeat;
+        @media all and (max-width: 1023px) {
+            width: 128px;
+            height: 128px;
+            top: 90px;
+            left: 93px;
+            bottom: unset;
+        }
+    }
+    &__circle2 {
+        width: vw(87);
+        height: vw(87);
+        left: vw(200);
+        top: vw(68);
+        background: url('../img/round2.svg') 50% / 100% no-repeat;
+        @media all and (max-width: 1023px) {
+            width: 56px;
+            height: 56px;
+            top: 79px;
+            right: 38px;
+            left: unset;
+        }
+    }
+    &__circle3 {
+        width: vw(41);
+        height: vw(41);
+        background: url('../img/round3.svg') 50% / 100% no-repeat;
+        bottom: vw(80);
+        left: vw(250);
+        @media all and (max-width: 1023px) {
+            width: 41px;
+            height: 41px;
+            top: 29px;
+            left: 138px;
+            bottom: unset;
+        }
+    }
+    &__closer {
+        width: vw(20);
+        height: vw(20);
+        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20' fill='none'%3E%3Cpath d='M19 1L1 19M1 1L19 19' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") 50% / 100% no-repeat;
+        position: absolute;
+        top: vw(20);
+        z-index: 2;
+        right: vw(20);
+        position: absolute;
+        cursor: pointer;
+        @media all and (max-width: 1023px) {
+            right: 20px;
+            top: 20px;
+            width: 20px;
+            height: 20px;
+        }
+    }
+    &__title {
+        color: #FFF;
+        font-size: vw(32);
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        margin-bottom: vw(18);
+        @media all and (max-width: 1023px) {
+            font-size: 32px;
+            margin-bottom: 24px;
+            text-align: center;
+        }
+    }
+    &__text {
+        color: #FFF;
+        font-size: vw(16);
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-bottom: vw(18);
+        @media all and (max-width: 1023px) {
+            font-size: 24px;
+            margin-bottom: 24px;
+            text-align: center;
+        }
+    }
+    input {
+        &[type="text"], &[type="tel"] {
+            border: 0;
+            width: 100%;
+            height: vw(50);
+            padding: vw(15) vw(30);
+            margin-bottom: vw(18);
+            color: #636164;
+            font-size: vw(16);
+            font-style: normal;
+            font-weight: 500;
+            height: vw(50);
+            line-height: normal;
+            @media all and (max-width: 1023px) {
+                width: 100%;
+                margin-bottom: 32px;
+                font-size: 16px;
+                height: 50px;
+                padding: 15px 30px;
+            }
+        }
+        &[type="submit"] {
+            width: 100%;
+            border: 0;
+            cursor: pointer;
+            border-radius: 4px;
+            color: var(--Color_fonts_def_black, #0D0D0D);
+            text-align: center;
+            font-size: vw(16);
+            font-style: normal;
+            display: block;
+            font-weight: 600;
+            line-height: normal;
+            letter-spacing: vw(0.48);
+            padding: vw(15);
+            &:hover {
+                color: #FFD130;
+            }
+            @media all and (max-width: 1023px) {
+                font-size: 16px;
+                padding: 15px;
+                letter-spacing: 0.48px;
+                margin-top: 0;
+            }
+        }
     }
 }
