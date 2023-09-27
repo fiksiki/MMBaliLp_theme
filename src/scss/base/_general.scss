@@ -193,24 +193,37 @@ textarea {
         transform: rotateX(0) translateY(100px);
     }
 }
-
-.wpcf7-response-output {
+.wpcf7-form-control-wrap {
+    position: relative;
+}
+.wpcf7-response-output, .wpcf7-not-valid-tip {
     position: absolute;
-    font-family: "Open Sans", sans-serif;
     font-style: normal;
-    font-weight: 300;
+    font-weight: 500;
     line-height: normal;
     font-size: vw(14);
     border: 0 !important;
     padding: 0 !important;
     margin: 0 !important;
     color: red;
-    width: calc(100% - vw(200)) !important;
+    width: 100%;
     @media all and (max-width: 1023px) {
         width: 100% !important;
         font-size: 12px;
         bottom: 50px;
     }
+}
+.wpcf7-not-valid-tip {
+    top: calc(100% + 5px);
+}
+.modal__in, .block_steps__in {
+    .wpcf7-not-valid-tip {
+        top: calc(100% + 17px);
+    }
+}
+.wpcf7-response-output {
+    top: calc(100% + 5px);
+    display: none;
 }
 .wpcf7-spinner {
     display: none !important;

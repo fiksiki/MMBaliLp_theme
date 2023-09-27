@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
@@ -483,15 +485,15 @@ template {
 @font-face {
   font-family: "Gilroy";
   font-display: swap;
-  src: url("../fonts/Gilroy-Extrabold.woff2") format("woff2"), url("../fonts/Gilroy-Extrabold.woff") format("woff"), url("../fonts/Gilroy-Extrabold.ttf") format("ttf");
-  font-weight: 800;
+  src: url("../fonts/Gilroy-Black.woff2") format("woff2"), url("../fonts/Gilroy-Black.woff") format("woff"), url("../fonts/Gilroy-Black.ttf") format("ttf");
+  font-weight: 900;
 }
 
 @font-face {
   font-family: "Gilroy";
   font-display: swap;
-  src: url("../fonts/Gilroy-Bold.woff2") format("woff2"), url("../fonts/Gilroy-Bold.woff") format("woff"), url("../fonts/Gilroy-Bold.ttf") format("ttf");
-  font-weight: 700;
+  src: url("../fonts/Gilroy-Heavy.woff2") format("woff2"), url("../fonts/Gilroy-Heavy.woff") format("woff"), url("../fonts/Gilroy-Heavy.ttf") format("ttf");
+  font-weight: 800;
 }
 
 @font-face {
@@ -511,29 +513,8 @@ template {
 @font-face {
   font-family: "Gilroy";
   font-display: swap;
-  src: url("../fonts/Gilroy-Black.woff2") format("woff2"), url("../fonts/Gilroy-Black.woff") format("woff"), url("../fonts/Gilroy-Black.ttf") format("ttf");
-  font-weight: 900;
-}
-
-@font-face {
-  font-family: "Gilroy";
-  font-display: swap;
-  src: url("../fonts/Gilroy-Heavy.woff2") format("woff2"), url("../fonts/Gilroy-Heavy.woff") format("woff"), url("../fonts/Gilroy-Heavy.ttf") format("ttf");
-  font-weight: 800;
-}
-
-@font-face {
-  font-family: "Gilroy";
-  font-display: swap;
-  src: url("../fonts/Gilroy-Thin.woff2") format("woff2"), url("../fonts/Gilroy-Thin.woff") format("woff"), url("../fonts/Gilroy-Thin.ttf") format("ttf");
-  font-weight: 100;
-}
-
-@font-face {
-  font-family: "Gilroy";
-  font-display: swap;
-  src: url("../fonts/Gilroy-Semibold.woff2") format("woff2"), url("../fonts/Gilroy-Semibold.woff") format("woff"), url("../fonts/Gilroy-Semibold.ttf") format("ttf");
-  font-weight: 600;
+  src: url("../fonts/Gilroy-Medium.woff2") format("woff2"), url("../fonts/Gilroy-Medium.woff") format("woff"), url("../fonts/Gilroy-Medium.ttf") format("ttf");
+  font-weight: 500;
 }
 
 @font-face {
@@ -546,8 +527,29 @@ template {
 @font-face {
   font-family: "Gilroy";
   font-display: swap;
-  src: url("../fonts/Gilroy-Medium.woff2") format("woff2"), url("../fonts/Gilroy-Medium.woff") format("woff"), url("../fonts/Gilroy-Medium.ttf") format("ttf");
-  font-weight: 500;
+  src: url("../fonts/Gilroy-Thin.woff2") format("woff2"), url("../fonts/Gilroy-Thin.woff") format("woff"), url("../fonts/Gilroy-Thin.ttf") format("ttf");
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  font-display: swap;
+  src: url("../fonts/Gilroy-Bold.woff2") format("woff2"), url("../fonts/Gilroy-Bold.woff") format("woff"), url("../fonts/Gilroy-Bold.ttf") format("ttf");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  font-display: swap;
+  src: url("../fonts/Gilroy-Extrabold.woff2") format("woff2"), url("../fonts/Gilroy-Extrabold.woff") format("woff"), url("../fonts/Gilroy-Extrabold.ttf") format("ttf");
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  font-display: swap;
+  src: url("../fonts/Gilroy-Semibold.woff2") format("woff2"), url("../fonts/Gilroy-Semibold.woff") format("woff"), url("../fonts/Gilroy-Semibold.ttf") format("ttf");
+  font-weight: 600;
 }
 
 @font-face {
@@ -763,18 +765,36 @@ textarea {
   }
 }
 
-.wpcf7-response-output {
+.wpcf7-form-control-wrap {
+  position: relative;
+}
+
+.wpcf7-response-output,
+.wpcf7-not-valid-tip {
   position: absolute;
-  font-family: "Open Sans", sans-serif;
   font-style: normal;
-  font-weight: 300;
+  font-weight: 500;
   line-height: normal;
   font-size: 0.7291666667vw;
   border: 0 !important;
   padding: 0 !important;
   margin: 0 !important;
   color: red;
-  width: calc(100% - 10.4166666667vw) !important;
+  width: 100%;
+}
+
+.wpcf7-not-valid-tip {
+  top: calc(100% + 5px);
+}
+
+.modal__in .wpcf7-not-valid-tip,
+.block_steps__in .wpcf7-not-valid-tip {
+  top: calc(100% + 17px);
+}
+
+.wpcf7-response-output {
+  top: calc(100% + 5px);
+  display: none;
 }
 
 .wpcf7-spinner {
@@ -1374,7 +1394,7 @@ svg * {
   position: relative;
 }
 
-.no-webp .block_why:before {
+.no-webp .block_why:before{
   background: url("../img/bg_top_why.png") 50%/100% no-repeat; }
 
 .block_why:before {
@@ -2161,6 +2181,7 @@ svg * {
 .block_steps {
   padding-top: 2.6041666667vw;
   padding-bottom: 3.90625vw;
+  /* для элемента input c type="radio" */
 }
 
 .block_steps__item {
@@ -2223,12 +2244,232 @@ svg * {
   padding: 2.8645833333vw 2.6041666667vw;
 }
 
+.block_steps__r-side > div {
+  height: 100%;
+}
+
 .block_steps__tit {
   color: #000;
   font-size: 1.25vw;
   font-style: normal;
   font-weight: 500;
   line-height: 145%;
+}
+
+.block_steps form {
+  height: 100%;
+}
+
+.block_steps__items {
+  position: relative;
+  height: 100%;
+}
+
+.block_steps__step {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  opacity: 1;
+  visibility: visible;
+  position: unset;
+}
+
+.block_steps__step.isHidden {
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.block_steps__step--top {
+  padding-bottom: 1.8229166667vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.block_steps__step--tit {
+  color: #000;
+  font-size: 1.25vw;
+  width: 100%;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 145%;
+}
+
+.block_steps__step--numbers {
+  flex: 0 0 3.3854166667vw;
+  margin-left: 0.5208333333vw;
+  color: #000;
+  text-align: center;
+  font-size: 1.25vw;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.125vw;
+  text-transform: uppercase;
+}
+
+.block_steps__step--numbers span {
+  color: #FFD130;
+}
+
+.block_steps__step--text input[type=text],
+.block_steps__step--text input[type=tel] {
+  border: 0;
+  background: none;
+  border-bottom: 1px solid #0D0D0D;
+  max-width: 29.84375vw;
+  width: 100%;
+  padding: 0.5208333333vw 0;
+  color: #0D0D0D;
+  font-size: 0.7291666667vw;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 156%;
+  margin-bottom: 10px;
+}
+
+.block_steps__step--text input[type=submit] {
+  margin-top: 0.78125vw;
+  max-width: 29.84375vw;
+  width: 100%;
+  border: 0;
+  color: #181818;
+  text-align: center;
+  font-size: 0.7291666667vw;
+  border-radius: 4px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.021875vw;
+  padding: 0.8333333333vw;
+}
+
+.block_steps__step--text input[type=submit]:hover {
+  color: #FFD130;
+}
+
+.block_steps__step--bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.0416666667vw;
+}
+
+.block_steps__step--bottom p {
+  max-width: 21.1979166667vw;
+  width: 100%;
+  display: block;
+}
+
+.block_steps__step--bottom input {
+  border: 0;
+  width: 100%;
+  background: none;
+  border-bottom: 1px solid #0D0D0D;
+  padding: 0.5208333333vw 0;
+  color: #0D0D0D;
+  font-size: 0.7291666667vw;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 156%;
+}
+
+.block_steps__step--buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 0 0 17.7083333333vw;
+  margin-left: auto;
+}
+
+.block_steps__step--step1 .block_steps__step--buttons {
+  justify-content: flex-end;
+}
+
+.block_steps__step--button {
+  width: calc(50% - 0.4166666667vw);
+  border: 0;
+  color: #181818;
+  text-align: center;
+  font-size: 0.7291666667vw;
+  border-radius: 4px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.021875vw;
+  text-decoration: none;
+  padding: 0.8333333333vw;
+}
+
+.block_steps__step--button.back-button {
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 1px solid #FFD130;
+  background: #fff;
+}
+
+.block_steps__step--button.back-button:hover {
+  background: #FFD130;
+}
+
+.block_steps .wpcf7-radio {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -1.0416666667vw;
+  margin-right: -1.0416666667vw;
+}
+
+.block_steps .wpcf7-radio .wpcf7-list-item {
+  margin-left: 1.0416666667vw;
+  margin-right: 1.0416666667vw;
+  cursor: pointer;
+  width: calc(50% - 2.0833333333vw);
+  margin-bottom: 1.0416666667vw;
+}
+
+.block_steps .wpcf7-list-item label {
+  cursor: pointer;
+}
+
+.block_steps .wpcf7-list-item label > input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.block_steps .wpcf7-list-item label > input:checked + span:before {
+  border-color: #7FBAFF;
+  background-color: #7FBAFF;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
+}
+
+.block_steps .wpcf7-list-item label > span {
+  display: inline-flex;
+  align-items: center;
+  color: #000;
+  font-size: 1.0416666667vw;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 145%;
+}
+
+.block_steps .wpcf7-list-item label > span:before {
+  content: "";
+  display: inline-block;
+  width: 1.0416666667vw;
+  height: 1.0416666667vw;
+  flex: 0 0 1.0416666667vw;
+  margin-right: 0.5208333333vw;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid #7FBAFF;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
 }
 
 .block_info {
@@ -3153,7 +3394,7 @@ svg * {
   background: #fafafa;
 }
 
-.no-webp .main_maps:before {
+.no-webp .main_maps:before{
   background: url("../img/bg_top_map.png") 50%/100% no-repeat; }
 
 .main_maps:before {
@@ -3728,7 +3969,7 @@ svg * {
   pointer-events: none;
 }
 
-.no-webp .modal__tree {
+.no-webp .modal__tree{
   background: url("../img/tree2.png") 50%/100% no-repeat; }
 
 .modal__tree {
@@ -3896,7 +4137,8 @@ svg * {
     padding-right: 17px;
   }
 
-  .wpcf7-response-output {
+  .wpcf7-response-output,
+  .wpcf7-not-valid-tip {
     width: 100% !important;
     font-size: 12px;
     bottom: 50px;
@@ -5543,7 +5785,7 @@ svg * {
     bottom: 0%;
   }
 
-  .no-webp .block_why:before {
+  .no-webp .block_why:before{
     background: url("../img/bg_top_map_mob.png") 100% 50%/contain no-repeat; }
 
   .block_why:before {
@@ -5551,7 +5793,7 @@ svg * {
     top: -70px;
   }
 
-  .no-webp .main_maps:before {
+  .no-webp .main_maps:before{
     background: url("../img/bg_top_map_mob.png") 100% 50%/contain no-repeat; }
 
   .main_maps:before {
@@ -5584,18 +5826,18 @@ svg * {
   }
 }
 
-.webp .block_why:before { background: url(../img/bg_top_why.webp) 50%/100% no-repeat; }
+.webp .block_why:before{ background: url(../img/bg_top_why.webp) 50%/100% no-repeat; }
 
-.webp .main_maps:before { background: url(../img/bg_top_map.webp) 50%/100% no-repeat; }
+.webp .main_maps:before{ background: url(../img/bg_top_map.webp) 50%/100% no-repeat; }
 
-.webp .modal__tree { background: url(../img/tree2.webp) 50%/100% no-repeat; }
+.webp .modal__tree{ background: url(../img/tree2.webp) 50%/100% no-repeat; }
 
-@media all and (max-width: 480px) {
+@media all and (max-width: 480px){
 
-  .webp .block_why:before { background: url(../img/bg_top_map_mob.webp) 100% 50%/contain no-repeat; }
+  .webp .block_why:before{ background: url(../img/bg_top_map_mob.webp) 100% 50%/contain no-repeat; }
 }
 
-@media all and (max-width: 480px) {
+@media all and (max-width: 480px){
 
-  .webp .main_maps:before { background: url(../img/bg_top_map_mob.webp) 100% 50%/contain no-repeat; }
+  .webp .main_maps:before{ background: url(../img/bg_top_map_mob.webp) 100% 50%/contain no-repeat; }
 }

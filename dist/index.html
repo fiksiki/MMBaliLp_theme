@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/style.css?_v=20230926141745">
+    <link rel="stylesheet" href="css/style.css?_v=20230927155217">
 </head>
 <body>
     <div class="wrapper" id="app" :class="{isMobile, isTablet}">
@@ -571,141 +571,145 @@
                 <div class="block_steps__text">В подарок за прохождения теста вы получите аудит и чек-лист «как улучшить показатели сайта в 2023 году»</div>
             </div>
             <div class="block_steps__r-side">
-                <div class="block_steps__step block_steps__step--step1">
-                    <div class="block_steps__step--top">
-                        <div class="block_steps__tit">В какой сфере ваш бизнес?</div>
-                        <div class="block_steps__step__numbers"><span>1</span> \ 6</div>
-                    </div>
-                    <div class="block_steps__step--select">
-                        <div>
-                            <input type="radio" id="biznesChoice1" name="biznes" value="Инвестиции" />
-                            <label for="biznesChoice1">Инвестиции</label>
+                <form action="" onsubmit="return false;">
+                    <div class="block_steps__items">
+                        <div class="block_steps__step block_steps__step--step1" id="step1" data-step="1">
+                            <div class="block_steps__step--top">
+                                <div class="block_steps__tit">В какой сфере ваш бизнес?</div>
+                                <div class="block_steps__step--numbers"><span>1</span> \ 6</div>
+                            </div>
+                            <div class="block_steps__step--select">
+                                <div>
+                                    <input type="radio" id="biznesChoice1" name="biznes" value="Инвестиции" />
+                                    <label for="biznesChoice1">Инвестиции</label>
+                                </div>
+                                <div>
+                                    <input type="radio" id="biznesChoice2" name="biznes" value="Недвижимость" />
+                                    <label for="biznesChoice2">Недвижимость</label>
+                                </div>
+                                <div>
+                                    <input type="radio" id="biznesChoice3" name="biznes" value="Туризм" />
+                                    <label for="biznesChoice3">Туризм</label>
+                                </div>
+                                <div>
+                                    <input type="radio" id="biznesChoice4" name="biznes" value="Строительство" />
+                                    <label for="biznesChoice4">Строительство</label>
+                                </div>
+                                <div>
+                                    <input type="radio" id="biznesChoice5" name="biznes" value="Гостинничный бизнес" />
+                                    <label for="biznesChoice5">Гостинничный бизнес</label>
+                                </div>
+                                <div>
+                                    <input type="radio" id="biznesChoice6" name="biznes" value="Красота и здоровье" />
+                                    <label for="biznesChoice6">Красота и здоровье</label>
+                                </div>
+                            </div>
+                            <div class="block_steps__step--bottom">
+                                <input type="text" name="" id="" placeholder="Напишите свой вариант, если не нашли подходящий ответ">
+                                <div class="block_steps__step--buttons">
+                                    <div class="block_steps__step--button next-button maximus_button" onclick="showStep(currentStep + 1)">Далее</div>
+                                </div>
+                            </div>
                         </div>
-                        <div>
-                            <input type="radio" id="biznesChoice2" name="biznes" value="Недвижимость" />
-                            <label for="biznesChoice1">Недвижимость</label>
+                        <div class="block_steps__step block_steps__step--step2 isHidden" id="step2" data-step="2">
+                            <div class="block_steps__step--top">
+                                <div class="block_steps__tit">Какая у вас проблема на текущий момент?</div>
+                                <div class="block_steps__step--numbers"><span>2</span> \ 6</div>
+                            </div>
+                            <div class="block_steps__step--select">
+                                <div>
+                                    <input type="radio" id="problemChoice1" name="problem" value="Не знаем кому продавать" />
+                                    <label for="problemChoice1">Не знаем кому продавать</label>
+                                </div>
+                                <div>
+                                    <input type="radio" id="problemChoice2" name="problem" value="Нет фирменного стиля или текущий не акутален" />
+                                    <label for="problemChoice2">Нет фирменного стиля или текущий не акутален</label>
+                                </div>
+                                <div>
+                                    <input type="radio" id="problemChoice3" name="problem" value="Мало лидов" />
+                                    <label for="problemChoice3">Мало лидов</label>
+                                </div>
+                                <div>
+                                    <input type="radio" id="problemChoice4" name="problem" value="Необходимо разработать/доработать текущий сайт" />
+                                    <label for="problemChoice4">Необходимо разработать/доработать текущий сайт</label>
+                                </div>
+                                <div>
+                                    <input type="radio" id="problemChoice5" name="problem" value="Слабая эффективность текущих рекламных каналов" />
+                                    <label for="problemChoice5">Слабая эффективность текущих рекламных каналов</label>
+                                </div>
+                            </div>
+                            <div class="block_steps__step--bottom">
+                                <input type="text" name="" id="" placeholder="Напишите свой вариант, если не нашли подходящий ответ">
+                                <div class="block_steps__step--buttons">
+                                    <div class="block_steps__step--button back-button" onclick="showStep(currentStep - 1)">Назад</div>
+                                    <div class="block_steps__step--button next-button maximus_button" onclick="showStep(currentStep + 1)">Далее</div>
+                                </div>
+                            </div>
                         </div>
-                        <div>
-                            <input type="radio" id="biznesChoice3" name="biznes" value="Туризм" />
-                            <label for="biznesChoice1">Туризм</label>
+                        <div class="block_steps__step block_steps__step--step3 isHidden" id="step3" data-step="3">
+                            <div class="block_steps__step--top">
+                                <div class="block_steps__tit">Прикрепите ссылку, если у вас есть сайт, соц.сети</div>
+                                <div class="block_steps__step--numbers"><span>3</span> \ 6</div>
+                            </div>
+                            <div class="block_steps__step--text">
+                                <input type="text" name="" id="" placeholder="Прикрепите ссылку">
+                            </div>
+                            <div class="block_steps__step--bottom">
+                                <div class="block_steps__step--buttons">
+                                    <div class="block_steps__step--button back-button" onclick="showStep(currentStep - 1)">Назад</div>
+                                    <div class="block_steps__step--button next-button maximus_button" onclick="showStep(currentStep + 1)">Далее</div>
+                                </div>
+                            </div>
                         </div>
-                        <div>
-                            <input type="radio" id="biznesChoice4" name="biznes" value="Строительство" />
-                            <label for="biznesChoice1">Строительство</label>
+                        <div class="block_steps__step block_steps__step--step4 isHidden" id="step4" data-step="4">
+                            <div class="block_steps__step--top">
+                                <div class="block_steps__tit">Прикрепите ссылку, если у вас есть сайт, соц.сети</div>
+                                <div class="block_steps__step--numbers"><span>4</span> \ 6</div>
+                            </div>
+                            <div class="block_steps__step--range">
+                                <input type="range" name="" id="">
+                            </div>
+                            <div class="block_steps__step--bottom">
+                                <input type="text" name="" id="" placeholder="Напишите свой вариант, если не нашли подходящий ответ">
+                                <div class="block_steps__step--buttons">
+                                    <div class="block_steps__step--button back-button" onclick="showStep(currentStep - 1)">Назад</div>
+                                    <div class="block_steps__step--button next-button maximus_button" onclick="showStep(currentStep + 1)">Далее</div>
+                                </div>
+                            </div>
                         </div>
-                        <div>
-                            <input type="radio" id="biznesChoice5" name="biznes" value="Гостинничный бизнес" />
-                            <label for="biznesChoice1">Гостинничный бизнес</label>
+                        <div class="block_steps__step block_steps__step--step5 isHidden" id="step5" data-step="5">
+                            <div class="block_steps__step--top">
+                                <div class="block_steps__tit">Допонительная ифнормация, которая будет полезна для более точного анализа ситуации  с предложением улучшений?</div>
+                                <div class="block_steps__step--numbers"><span>5</span> \ 6</div>
+                            </div>
+                            <div class="block_steps__step--text">
+                                <input type="text" name="" id="" placeholder="Ваше предложение или дополнительная информация">
+                            </div>
+                            <div class="block_steps__step--bottom">
+                                <div class="block_steps__step--buttons">
+                                    <div class="block_steps__step--button back-button" onclick="showStep(currentStep - 1)">Назад</div>
+                                    <div class="block_steps__step--button next-button maximus_button" onclick="showStep(currentStep + 1)">Далее</div>
+                                </div>
+                            </div>
                         </div>
-                        <div>
-                            <input type="radio" id="biznesChoice6" name="biznes" value="Красота и здоровье" />
-                            <label for="biznesChoice1">Красота и здоровье</label>
-                        </div>
-                    </div>
-                    <div class="block_steps__step--bottom">
-                        <input type="text" name="" id="" placeholder="Напишите свой вариант, если не нашли подходящий ответ">
-                        <div class="buttons">
-                            <button class="button next-button" type="button" onclick="showStep(currentStep + 1)">Далее</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="block_steps__step block_steps__step--step2">
-                    <div class="block_steps__step--top">
-                        <div class="block_steps__tit">Какая у вас проблема на текущий момент?</div>
-                        <div class="block_steps__step__numbers"><span>2</span> \ 6</div>
-                    </div>
-                    <div class="block_steps__step--select">
-                        <div>
-                            <input type="radio" id="problemChoice1" name="problem" value="Не знаем кому продавать" />
-                            <label for="problemChoice1">Не знаем кому продавать</label>
-                        </div>
-                        <div>
-                            <input type="radio" id="problemChoice2" name="problem" value="Нет фирменного стиля или текущий не акутален" />
-                            <label for="problemChoice1">Нет фирменного стиля или текущий не акутален</label>
-                        </div>
-                        <div>
-                            <input type="radio" id="problemChoice3" name="problem" value="Мало лидов" />
-                            <label for="problemChoice1">Мало лидов</label>
-                        </div>
-                        <div>
-                            <input type="radio" id="problemChoice4" name="problem" value="Необходимо разработать/доработать текущий сайт" />
-                            <label for="problemChoice1">Необходимо разработать/доработать текущий сайт</label>
-                        </div>
-                        <div>
-                            <input type="radio" id="problemChoice5" name="problem" value="Слабая эффективность текущих рекламных каналов" />
-                            <label for="problemChoice1">Слабая эффективность текущих рекламных каналов</label>
-                        </div>
-                    </div>
-                    <div class="block_steps__step--bottom">
-                        <input type="text" name="" id="" placeholder="Напишите свой вариант, если не нашли подходящий ответ">
-                        <div class="buttons">
-                            <button class="button back-button" type="button" onclick="showStep(currentStep - 1)">Назад</button>
-                            <button class="button next-button" type="button" onclick="showStep(currentStep + 1)">Далее</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="block_steps__step block_steps__step--step3">
-                    <div class="block_steps__step--top">
-                        <div class="block_steps__tit">Прикрепите ссылку, если у вас есть сайт, соц.сети</div>
-                        <div class="block_steps__step__numbers"><span>3</span> \ 6</div>
-                    </div>
-                    <div class="block_steps__step--text">
-                        <input type="text" name="" id="" placeholder="Прикрепите ссылку">
-                    </div>
-                    <div class="block_steps__step--bottom">
-                        <div class="buttons">
-                            <button class="button back-button" type="button" onclick="showStep(currentStep - 1)">Назад</button>
-                            <button class="button next-button" type="button" onclick="showStep(currentStep + 1)">Далее</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="block_steps__step block_steps__step--step4">
-                    <div class="block_steps__step--top">
-                        <div class="block_steps__tit">Прикрепите ссылку, если у вас есть сайт, соц.сети</div>
-                        <div class="block_steps__step__numbers"><span>4</span> \ 6</div>
-                    </div>
-                    <div class="block_steps__step--range">
-                        <input type="range" name="" id="">
-                    </div>
-                    <div class="block_steps__step--bottom">
-                        <input type="text" name="" id="" placeholder="Напишите свой вариант, если не нашли подходящий ответ">
-                        <div class="buttons">
-                            <button class="button back-button" type="button" onclick="showStep(currentStep - 1)">Назад</button>
-                            <button class="button next-button" type="button" onclick="showStep(currentStep + 1)">Далее</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="block_steps__step block_steps__step--step4">
-                    <div class="block_steps__step--top">
-                        <div class="block_steps__tit">Допонительная ифнормация, которая будет полезна для более точного анализа ситуации  с предложением улучшений?</div>
-                        <div class="block_steps__step__numbers"><span>5</span> \ 6</div>
-                    </div>
-                    <div class="block_steps__step--text">
-                        <input type="text" name="" id="" placeholder="Ваше предложение или дополнительная информация">
-                    </div>
-                    <div class="block_steps__step--bottom">
-                        <div class="buttons">
-                            <button class="button back-button" type="button" onclick="showStep(currentStep - 1)">Назад</button>
-                            <button class="button next-button" type="button" onclick="showStep(currentStep + 1)">Далее</button>
+                        <div class="block_steps__step block_steps__step--step6 isHidden" id="step6" data-step="6">
+                            <div class="block_steps__step--top">
+                                <div class="block_steps__tit">Допонительная ифнормация, которая будет полезна для более точного анализа ситуации  с предложением улучшений?</div>
+                                <div class="block_steps__step--numbers"><span>6</span> \ 6</div>
+                            </div>
+                            <div class="block_steps__step--text">
+                                <input type="text" name="" id="" placeholder="Имя">
+                                <input type="tel" name="" id="" placeholder="Телефон">
+                                <input type="submit" value="Отправить" class="maximus_button">
+                            </div>
+                            <div class="block_steps__step--bottom">
+                                <div class="block_steps__step--buttons">
+                                    <div class="block_steps__step--button back-button" onclick="showStep(currentStep - 1)">Назад</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="block_steps__step block_steps__step--step4">
-                    <div class="block_steps__step--top">
-                        <div class="block_steps__tit">Допонительная ифнормация, которая будет полезна для более точного анализа ситуации  с предложением улучшений?</div>
-                        <div class="block_steps__step__numbers"><span>5</span> \ 6</div>
-                    </div>
-                    <div class="block_steps__step--text">
-                        <input type="text" name="" id="" placeholder="Имя">
-                        <input type="tel" name="" id="" placeholder="Телефон">
-                        <input type="submit" value="Отправить">
-                    </div>
-                    <div class="block_steps__step--bottom">
-                        <div class="buttons">
-                            <button class="button back-button" type="button" onclick="showStep(currentStep - 1)">Назад</button>
-                        </div>
-                    </div>
-                </div>
+                </form>
             </div>
         </div>
     </div>
@@ -1196,6 +1200,6 @@
     </div>
 </div>
     </div>
-    <script src="js/app.min.js?_v=20230926141745"></script>
+    <script src="js/app.min.js?_v=20230927155217"></script>
 </body>
 </html>
