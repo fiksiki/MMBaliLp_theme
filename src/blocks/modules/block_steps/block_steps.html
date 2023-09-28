@@ -10,9 +10,9 @@
                 <div class="block_steps__text">В подарок за прохождения теста вы получите аудит и чек-лист «как улучшить показатели сайта в 2023 году»</div>
             </div>
             <div class="block_steps__r-side">
-                <form action="" onsubmit="return false;">
+                <form action="">
                     <div class="block_steps__items">
-                        <div class="block_steps__step block_steps__step--step1" id="step1" data-step="1">
+                        <div class="block_steps__step block_steps__step--step1 isHidden" id="step1" data-step="1">
                             <div class="block_steps__step--top">
                                 <div class="block_steps__tit">В какой сфере ваш бизнес?</div>
                                 <div class="block_steps__step--numbers"><span>1</span> \ 6</div>
@@ -100,13 +100,20 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="block_steps__step block_steps__step--step4 isHidden" id="step4" data-step="4">
+                        <div class="block_steps__step block_steps__step--step4" id="step4" data-step="4">
                             <div class="block_steps__step--top">
                                 <div class="block_steps__tit">Прикрепите ссылку, если у вас есть сайт, соц.сети</div>
                                 <div class="block_steps__step--numbers"><span>4</span> \ 6</div>
                             </div>
                             <div class="block_steps__step--range">
-                                <input type="range" name="" id="">
+                                <div class="range-values">
+                                    <div>Бюджет:</div>
+                                    <input type="number" id="minInput" min="60000" max="1000000" value="60000">
+                                    <input type="number" id="maxInput" min="60000" max="1000000" value="1000000">
+                                </div>
+                                <div class="slider-container">
+                                    <div id="rangeSlider"></div>
+                                </div>
                             </div>
                             <div class="block_steps__step--bottom">
                                 <input type="text" name="" id="" placeholder="Напишите свой вариант, если не нашли подходящий ответ">

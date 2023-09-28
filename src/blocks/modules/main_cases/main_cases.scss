@@ -155,6 +155,10 @@
             padding-bottom: 24px;
         }
     }
+    &__info {
+        display: block;
+        text-decoration: none;
+    }
     &__item {
         border-radius: 100px;
         width: max-content;

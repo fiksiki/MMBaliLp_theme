@@ -216,10 +216,15 @@ textarea {
 .wpcf7-not-valid-tip {
     top: calc(100% + 5px);
 }
-.modal__in, .block_steps__in {
-    .wpcf7-not-valid-tip {
-        top: calc(100% + 17px);
+.wpcf7-not-valid {
+    border-color: red;
+    color: red;
+    &::placeholder {
+        color: red;
     }
+}
+.wpcf7-not-valid-tip {
+    display: none;
 }
 .wpcf7-response-output {
     top: calc(100% + 5px);

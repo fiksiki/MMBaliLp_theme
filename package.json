@@ -43,7 +43,9 @@
   },
   "dependencies": {
     "jquery": "^3.6.0",
+    "nouislider": "^15.7.1",
     "slick-carousel": "^1.8.1",
-    "vue": "^2.6.14"
+    "vue": "^2.6.14",
+    "wowjs": "^1.1.3"
   }
 }
