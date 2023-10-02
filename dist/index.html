@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/style.css?_v=20231002105127">
+    <link rel="stylesheet" href="css/style.css?_v=20231002120926">
 </head>
 <body>
     <div class="wrapper" id="app" :class="{isMobile, isTablet}">
@@ -23,18 +23,18 @@
                     <path class="animate_stroke" d="M40.5 7V3.72244L37.5853 5.22142L21.0134 13.7441L4.93578 5.23242L2 3.67819V7V27V28.1439L2.98596 28.7239L19.986 38.7239L20.9855 39.3118L21.9923 38.7365L39.4923 28.7365L40.5 28.1606V27V7Z" stroke="black" stroke-width="4"/>
                 </svg>
             </a>
-            <div class="header__title">Маркетинговое Агентство на Бали</div>
-            <address class="header__contacts">
+            <div class="header__title" v-if="sizes.window >= 1024">Маркетинговое Агентство на Бали</div>
+            <address class="header__contacts" v-if="sizes.window >= 1024">
                 <a href="mailto:info@maximusmedia.pro" class="header__mail">info@maximusmedia.pro</a>
                 <a href="tel:628784201024" class="header__tel">+62 878-4201-024</a>
             </address>
             <div class="header__info">
-                <div class="header__langs">
+                <div class="header__langs" v-if="sizes.window >= 1024">
                     <a href="#" class="header__lang">EN</a>
                     <a href="#" class="header__lang isActive">RU</a>
                 </div>
                 <div class="header__socs">
-                    <a href="tel:628784201024" class="header__soc header__soc--tel">
+                    <a href="tel:628784201024" class="header__soc header__soc--tel" v-if="sizes.window <= 1023">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect width="24" height="24" rx="12" fill="#FFD130"/>
                             <path d="M15.0688 13.6984L14.7402 14.0182C14.7402 14.0182 13.958 14.7777 11.8239 12.7038C9.6897 10.6299 10.4719 9.87037 10.4719 9.87037L10.6784 9.66849C11.189 9.17295 11.2374 8.37671 10.7918 7.79506L9.88181 6.60705C9.33004 5.88704 8.26477 5.79175 7.63283 6.40587L6.49895 7.50706C6.18623 7.812 5.97679 8.20589 6.00206 8.64354C6.06706 9.76378 6.58561 12.173 9.47737 14.9838C12.5446 17.9641 15.4227 18.0827 16.5992 17.9754C16.9718 17.9415 17.2954 17.7566 17.5561 17.5024L18.5816 16.5057C19.275 15.833 19.08 14.6789 18.1931 14.2081L16.8137 13.4746C16.2316 13.1655 15.5238 13.2565 15.0688 13.6984Z" fill="black"/>
@@ -53,7 +53,7 @@
                         </svg>
                     </a>
                 </div>
-                <div class="header__burger" :class="{'isOpened': header.isMobileMenuOpened}">
+                <div class="header__burger" :class="{'isOpened': header.isMobileMenuOpened}" v-if="sizes.window <= 1023">
                     <div class="header__burger--icon" @click.prevent="header.toogleMobileMenu.apply(header)"></div>
                     <div class="header__burger--body">
                         <div class="header__burger--top">
@@ -110,10 +110,10 @@
                         </div>
                     </div>
                 </div>
-                <button class="header__btn maximus_button">Связаться с нами</button>
+                <button class="header__btn maximus_button" v-if="sizes.window >= 1024">Связаться с нами</button>
             </div>
         </div>
-        <div class="header__bottom">
+        <div class="header__bottom" v-if="sizes.window >= 1024">
             <nav>
                 <ul>
                     <li><a href="#">О нас</a></li>
@@ -518,8 +518,8 @@
         <div class="block_steps__item">
             <div class="block_steps__l-side">
                 <div class="block_steps__gift rotate_animation">
-                    <picture><source srcset="./img.webpt2.webp" type="image/webp"><img class="block_steps__gift--pc" src="./img/gift2.png" alt=""></picture>
-                    <picture><source srcset="./img.webpt3.webp" type="image/webp"><img class="block_steps__gift--mob" src="./img/gift3.png" alt=""></picture>
+                    <div class="block_steps__gift block_steps__gift--pc"></div>
+                    <div class="block_steps__gift block_steps__gift--mob"></div>
                 </div>
                 <div class="block_steps__title">Ответьте на Несколько вопросов и получите чек-лист по маркетингу</div>
                 <div class="block_steps__text">В подарок за прохождения теста вы получите аудит и чек-лист «как улучшить показатели сайта в 2023 году»</div>
@@ -1117,6 +1117,6 @@
     </div>
 </div>
     </div>
-    <script src="js/app.min.js?_v=20231002105127"></script>
+    <script src="js/app.min.js?_v=20231002120926"></script>
 </body>
 </html>

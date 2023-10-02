@@ -3849,6 +3849,12 @@ svg * {
      object-fit: contain;
 }
 
+.no-webp .block_steps__gift--pc{
+  background: url("../img/gift2.png") 50%/100% no-repeat; }
+
+.no-webp .block_steps__gift--mob{
+  background: url("../img/gift3.png") 50%/100% no-repeat; }
+
 .block_steps__gift--mob {
   display: none;
 }
@@ -7762,6 +7768,10 @@ svg * {
 .webp .main_cases__leaf--leafl{ background: url(../img/leaf5.webp) 50%/100% no-repeat; }
 
 .webp .main_cases__leaf--leafr{ background: url(../img/leaf6.webp) 50%/100% no-repeat; }
+
+.webp .block_steps__gift--pc{ background: url(../img/gift2.webp) 50%/100% no-repeat; }
+
+.webp .block_steps__gift--mob{ background: url(../img/gift3.webp) 50%/100% no-repeat; }
 
 .webp .block_info__tree{ background: url(../img/tree2.webp) 50%/100% no-repeat; }
 

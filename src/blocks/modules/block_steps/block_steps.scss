@@ -45,11 +45,13 @@
             object-fit: contain;
         }
         &--pc {
+            background: url('../img/gift2.png') 50% / 100% no-repeat;
             @media all and (max-width: 1023px) {
                 display: none;
             }
         }
         &--mob {
+            background: url('../img/gift3.png') 50% / 100% no-repeat;
             display: none;
             @media all and (max-width: 1023px) {
                 display: block;

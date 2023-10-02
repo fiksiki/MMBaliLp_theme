@@ -33,6 +33,7 @@ window.app = new Vue({
         window.addEventListener('resize', () => {
             this.sizes.window = window.innerWidth;
         });
+        
     },
     beforeMount() {
         this.isMounted = true;
