@@ -2,17 +2,17 @@
     <div class="main_first__house"></div>
     <div class="main_first__sea"></div>
     <div class="main_first__leafl branch_animation">
-        <div class="main_first__leafl main_first__leafl--pc"></div>
-        <div class="main_first__leafl main_first__leafl--mob"></div>
+        <div class="main_first__leafl main_first__leafl--pc" v-if="sizes.window >= 1024"></div>
+        <div class="main_first__leafl main_first__leafl--mob" v-if="sizes.window <= 1023"></div>
     </div>
     <div class="main_first__leafr branch_animation">
-        <div class="main_first__leafr main_first__leafr--pc"></div>
-        <div class="main_first__leafr main_first__leafr--mob"></div>
+        <div class="main_first__leafr main_first__leafr--pc" v-if="sizes.window >= 1024"></div>
+        <div class="main_first__leafr main_first__leafr--mob" v-if="sizes.window <= 1023"></div>
     </div>
     <div class="main_first__leaftl branch_animation"></div>
     <div class="main_first__leaftr branch_animation">
-        <div class="main_first__leaftr main_first__leaftr--pc"></div>
-        <div class="main_first__leaftr main_first__leaftr--mob"></div>
+        <div class="main_first__leaftr main_first__leaftr--pc" v-if="sizes.window >= 1024"></div>
+        <div class="main_first__leaftr main_first__leaftr--mob" v-if="sizes.window <= 1023"></div>
     </div>
     <div class="main_first__round translate_round"></div>
     <div class="main_first__in center_block4">

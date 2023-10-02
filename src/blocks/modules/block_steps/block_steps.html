@@ -3,8 +3,8 @@
         <div class="block_steps__item">
             <div class="block_steps__l-side">
                 <div class="block_steps__gift rotate_animation">
-                    <div class="block_steps__gift block_steps__gift--pc"></div>
-                    <div class="block_steps__gift block_steps__gift--mob"></div>
+                    <div class="block_steps__gift block_steps__gift--pc" v-if="sizes.window >= 1024"></div>
+                    <div class="block_steps__gift block_steps__gift--mob" v-if="sizes.window <= 1023"></div>
                 </div>
                 <div class="block_steps__title">Ответьте на Несколько вопросов и получите чек-лист по маркетингу</div>
                 <div class="block_steps__text">В подарок за прохождения теста вы получите аудит и чек-лист «как улучшить показатели сайта в 2023 году»</div>

@@ -3,9 +3,9 @@
     <div class="block_why__round2"></div>
     <div class="block_why__in">
         <div class="block_why__title">ПОЧЕМУ ВЫБИРАЮТ MAXIMUS MEDIA</div>
-        <div class="block_why__line"></div>
-        <div class="block_why__line block_why__line--mob"></div>
-        <div class="block_why__link">
+        <div class="block_why__line" v-if="sizes.window >= 1024"></div>
+        <div class="block_why__line block_why__line--mob" v-if="sizes.window <= 1023"></div>
+        <div class="block_why__link" v-if="sizes.window >= 1024">
             <svg width="314" height="314" viewBox="0 0 314 314" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="157" cy="157" r="157" fill="#FFD130"/>
                 <circle cx="157.5" cy="156.5" r="108.5" fill="#FAFAFA"/>

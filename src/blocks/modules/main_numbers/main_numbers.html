@@ -1,11 +1,11 @@
 <section class="main_numbers" id="main_numbers">
-    <div class="main_numbers__around rotate_animation"></div>
+    <div class="main_numbers__around rotate_animation" v-if="sizes.window >= 1024"></div>
     <div class="main_numbers__tree branch_animation"></div>
     <div class="main_numbers__round"></div>
-    <div class="main_numbers__round2"></div>
-    <div class="main_numbers__tree3 branch_animation"></div>
+    <div class="main_numbers__round2" v-if="sizes.window >= 1024"></div>
+    <div class="main_numbers__tree3 branch_animation" v-if="sizes.window <= 1023"></div>
     <div class="main_numbers__ins">
-        <div class="main_numbers__tree2 branch_animation"></div>
+        <div class="main_numbers__tree2 branch_animation" v-if="sizes.window >= 1024"></div>
         <div class="main_numbers__in center_block">
             <div class="main_numbers__blocks">
                 <div class="main_numbers__block">

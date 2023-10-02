@@ -1,10 +1,10 @@
 <section class="main_form" id="main_form">
-    <div class="main_form__leaf main_form__leaf--leafl branch_animation"></div>
-    <div class="main_form__leaf main_form__leaf--leafr branch_animation"></div>
+    <div class="main_form__leaf main_form__leaf--leafl branch_animation" v-if="sizes.window >= 1024"></div>
+    <div class="main_form__leaf main_form__leaf--leafr branch_animation" v-if="sizes.window >= 1024"></div>
     <div class="main_form__in center_block">
         <div class="main_form__l-side">
             <form action="">
-                <div class="main_form__title main_form__title--pc">записаться на бесплатную консультацию</div>
+                <div class="main_form__title main_form__title--pc" v-if="sizes.window >= 1024">записаться на бесплатную консультацию</div>
                 <div class="main_form__text">Мы с удовольствием ответим на любые Ваши вопросы по продвижению Вашего бизнеса</div>
                 <input type="text" name="" id="" placeholder="Ваше имя*">
                 <input type="tel" name="" id="" placeholder="Номер телефона*">
@@ -16,7 +16,7 @@
             </div>
         </div>
         <div class="main_form__r-side">
-            <div class="main_form__title main_form__title--mob">записаться на бесплатную консультацию</div>
+            <div class="main_form__title main_form__title--mob" v-if="sizes.window <= 1023">записаться на бесплатную консультацию</div>
             <img src="./img/mac.png" alt="">
         </div>
     </div>

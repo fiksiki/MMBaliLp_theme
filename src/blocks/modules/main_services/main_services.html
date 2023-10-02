@@ -4,12 +4,12 @@
         <div class="main_services__blocks">
             <div class="main_services__block main_services__block--dev">
                 <div class="main_services__round"></div>
-                <div class="main_services__round2"></div>
-                <div class="main_services__tree branch_animation"></div>
-                <div class="main_services__tree main_services__tree--mob"></div>
+                <div class="main_services__round2" v-if="sizes.window >= 1024"></div>
+                <div class="main_services__tree branch_animation" v-if="sizes.window >= 1024"></div>
+                <div class="main_services__tree main_services__tree--mob" v-if="sizes.window <= 1023"></div>
                 <div class="main_services__img">
-                    <img class="main_services__img--pc" src="./img/s1.png" alt="">
-                    <img class="main_services__img--mob" src="./img/s1-mob.png" alt="">
+                    <img class="main_services__img--pc" v-if="sizes.window >= 1024" src="./img/s1.png" alt="">
+                    <img class="main_services__img--mob" v-if="sizes.window <= 1023" src="./img/s1-mob.png" alt="">
                 </div>
                 <div class="main_services__info">
                     <div class="main_services__tit">Разработка сайтов, <br>брендбука,логотипа</div>
@@ -18,13 +18,13 @@
                 </div>
             </div>
             <div class="main_services__block main_services__block--target">
-                <div class="main_services__tree branch_animation"></div>
-                <div class="main_services__tree main_services__tree--mob"></div>
+                <div class="main_services__tree branch_animation" v-if="sizes.window >= 1024"></div>
+                <div class="main_services__tree main_services__tree--mob" v-if="sizes.window <= 1023"></div>
                 <div class="main_services__round"></div>
                 <div class="main_services__round2"></div>
                 <div class="main_services__img">
-                    <img class="main_services__img--pc" src="./img/s2.png" alt="">
-                    <img class="main_services__img--mob" src="./img/s2-mob.png" alt="">
+                    <img class="main_services__img--pc" v-if="sizes.window >= 1024" src="./img/s2.png" alt="">
+                    <img class="main_services__img--mob" v-if="sizes.window <= 1023" src="./img/s2-mob.png" alt="">
                 </div>
                 <div class="main_services__info">
                     <div class="main_services__tit">Соц сети + Таргет <br>+ контекст</div>
@@ -36,8 +36,8 @@
                 <div class="main_services__tree branch_animation"></div>
                 <div class="main_services__cube"></div>
                 <div class="main_services__img">
-                    <img class="main_services__img--pc" src="./img/s3.png" alt="">
-                    <img class="main_services__img--mob" src="./img/s3-mob.png" alt="">
+                    <img class="main_services__img--pc" v-if="sizes.window >= 1024" src="./img/s3.png" alt="">
+                    <img class="main_services__img--mob" v-if="sizes.window <= 1023" src="./img/s3-mob.png" alt="">
                 </div>
                 <div class="main_services__info">
                     <div class="main_services__tit">Сайты + SEO <br>и G maps</div>
@@ -50,8 +50,8 @@
                 <div class="main_services__trigle"></div>
                 <div class="main_services__round2"></div>
                 <div class="main_services__img">
-                    <img class="main_services__img--pc" src="./img/s4.png" alt="">
-                    <img class="main_services__img--mob" src="./img/s4-mob.png" alt="">
+                    <img class="main_services__img--pc" v-if="sizes.window >= 1024" src="./img/s4.png" alt="">
+                    <img class="main_services__img--mob" v-if="sizes.window <= 1023" src="./img/s4-mob.png" alt="">
                 </div>
                 <div class="main_services__info">
                     <div class="main_services__tit">CRM и воронки <br>продаж</div>

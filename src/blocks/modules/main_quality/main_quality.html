@@ -1,25 +1,25 @@
 <section class="main_quality" id="main_quality">
-    <div class="main_quality__leaf-mob branch_animation"></div>
-    <div class="main_quality__star"></div>
-    <div class="main_quality__line"></div>
+    <div class="main_quality__leaf-mob branch_animation" v-if="sizes.window <= 1023"></div>
+    <div class="main_quality__star" v-if="sizes.window >= 1024"></div>
+    <div class="main_quality__line" v-if="sizes.window >= 1024"></div>
     <div class="main_quality__round translate_round"></div>
-    <div class="main_quality__tree branch_animation"></div>
-    <div class="main_quality__square rotate_animation"></div>
+    <div class="main_quality__tree branch_animation" v-if="sizes.window >= 1024"></div>
+    <div class="main_quality__square rotate_animation" v-if="sizes.window >= 1024"></div>
     <div class="main_quality__in center_block2">
         <div class="main_quality__l-side">
-            <div class="main_quality__title main_quality__title--pc">МЫ ПРИВЕЗЛИ КАЧЕСТВО 
+            <div class="main_quality__title main_quality__title--pc" v-if="sizes.window >= 1024">МЫ ПРИВЕЗЛИ КАЧЕСТВО 
                 НА БАЛИ</div>
             <div class="main_quality__subtitle">Команда с 5 летним опытом на Бали</div>
             <div class="main_quality__text">У нас официальная кампания с индонезами и офисом на Бали. Официальный договор и взаиморасчеты.</div>
         </div>
         <div class="main_quality__r-side">
-            <div class="main_quality__title main_quality__title--mob">МЫ ПРИВЕЗЛИ КАЧЕСТВО 
+            <div class="main_quality__title main_quality__title--mob" v-if="sizes.window <= 1023">МЫ ПРИВЕЗЛИ КАЧЕСТВО 
                 НА БАЛИ</div>
-            <div class="main_quality__leaf branch_animation"></div>
+            <div class="main_quality__leaf branch_animation" v-if="sizes.window >= 1024"></div>
             <div class="main_quality__img">
                 <img src="./img/img.jpg" alt="">
             </div>
-            <div class="main_quality__line-mob branch_animation"></div>
+            <div class="main_quality__line-mob branch_animation" v-if="sizes.window <= 1023"></div>
             <div class="main_quality__link">
                 <svg width="314" height="314" viewBox="0 0 314 314" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="157" cy="157" r="157" fill="#F5F5F5"/>

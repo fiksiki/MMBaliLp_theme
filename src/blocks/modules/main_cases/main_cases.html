@@ -1,6 +1,6 @@
 <section class="main_cases" id="main_cases">
-    <div class="main_cases__leaf main_cases__leaf--leafl branch_animation"></div>
-    <div class="main_cases__leaf main_cases__leaf--leafr branch_animation"></div>
+    <div class="main_cases__leaf main_cases__leaf--leafl branch_animation" v-if="sizes.window >= 1024"></div>
+    <div class="main_cases__leaf main_cases__leaf--leafr branch_animation" v-if="sizes.window >= 1024"></div>
     <div class="main_cases__in">
         <div class="main_cases__title">Кейсы</div>
         <div class="main_cases__blocks js_main_cases">
