@@ -378,6 +378,27 @@
             margin-right: 0;
         }
     }
+    &__link {
+        text-decoration: none;
+        color: #FFF;
+        font-size: vw(12);
+        font-style: normal;
+        font-weight: 500;
+        display: inline-block;
+        line-height: 150%;    
+        background-image: linear-gradient(currentColor,currentColor);
+        background-position: 0 100%;
+        background-repeat: no-repeat;
+        transition: background-size .3s;
+        background-size: 0 1px;
+        @media all and (max-width: 1023px) {
+            margin-bottom: 24px;
+            font-size: 12px;
+        }
+        &:hover {
+            background-size: 100% 1px;
+        }
+    }
     &__docs {
         padding-right: vw(40);
         display: flex;

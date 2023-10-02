@@ -5636,6 +5636,25 @@ svg * {
   margin-right: 0.5208333333vw;
 }
 
+.footer__link {
+  text-decoration: none;
+  color: #FFF;
+  font-size: 0.625vw;
+  font-style: normal;
+  font-weight: 500;
+  display: inline-block;
+  line-height: 150%;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.3s;
+  background-size: 0 1px;
+}
+
+.footer__link:hover {
+  background-size: 100% 1px;
+}
+
 .footer__docs {
   padding-right: 2.0833333333vw;
   display: flex;
@@ -7520,6 +7539,11 @@ svg * {
     margin-bottom: 32px;
     font-size: 14px;
     margin-right: 0;
+  }
+
+  .footer__link {
+    margin-bottom: 24px;
+    font-size: 12px;
   }
 
   .footer__docs {
