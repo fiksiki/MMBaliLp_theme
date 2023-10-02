@@ -54,11 +54,13 @@
         height: vw(879);
         &--mob {
             display: none;
+            background: url('../img/map_mobs.svg') 50% / 100% no-repeat;
             @media all and (max-width: 1023px) {
                 display: block;
             }
         }
         &--pc {
+            background: url('../img/map.png') 50% / 100% no-repeat;
             @media all and (max-width: 1023px) {
                 display: none;
             }

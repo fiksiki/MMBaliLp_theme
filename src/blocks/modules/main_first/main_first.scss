@@ -32,6 +32,7 @@
         right: 0;
         bottom: 15px;
         z-index: 1;
+        background: url('../img/home.png') 50% / 100% no-repeat;
         @media all and (max-width: 1023px) {
             width: 788px;
             height: 591px;
@@ -46,9 +47,7 @@
         left: 0;
         right: 0;
         z-index: 0;
-        img {
-            object-fit: cover;
-        }
+        background: url('../img/bg_sea.png') 50% / cover no-repeat;
         @media all and (max-width: 1023px) {
             height: 460px;
             width: 1023px;
@@ -73,11 +72,13 @@
             bottom: -2%;
         }
         &--pc {
+            background: url('../img/leaf7.png') 50% / 100% no-repeat;
             @media all and (max-width: 1023px) {
                 display: none;
             }
         }
         &--mob {
+            background: url('../img/leaf12.png') 50% / 100% no-repeat;
             display: none;
             @media all and (max-width: 1023px) {
                 display: block;
@@ -102,12 +103,14 @@
             bottom: 0%;
         }
         &--pc {
+            background: url('../img/leaf8.png') 50% / 100% no-repeat;
             @media all and (max-width: 1023px) {
                 display: none;
             }
         }
         &--mob {
             display: none;
+            background: url('../img/leaf13.png') 50% / 100% no-repeat;
             @media all and (max-width: 1023px) {
                 display: block;
             }
@@ -119,6 +122,7 @@
         top: vw(-150);
         left: 0;
         z-index: 3;
+        background: url('../img/leaf10.png') 50% / 100% no-repeat;
         @media all and (max-width: 1023px) {
             width: 111px;
             height: 118px;
@@ -128,7 +132,7 @@
     &__leaftr {
         width: vw(273);
         height: vw(270);
-        top: vw(-150);
+        top: vw(-90);
         right: 0;
         z-index: 3;
         @media all and (max-width: 1023px) {
@@ -137,11 +141,13 @@
             top: -110px;
         }
         &--pc {
+            background: url('../img/leaf9.png') 50% / 100% no-repeat;
             @media all and (max-width: 1023px) {
                 display: none;
             }
         }
         &--mob {
+            background: url('../img/leaf11.png') 50% / 100% no-repeat;
             display: none;
             @media all and (max-width: 1023px) {
                 display: block;
@@ -154,6 +160,7 @@
         top: vw(67);
         left: vw(8);
         z-index: 1;
+        background: url('../img/round2.svg') 50% / 100% no-repeat;
     }
     &__title {
         color: var(--Color_fonts_def_black, #0D0D0D);

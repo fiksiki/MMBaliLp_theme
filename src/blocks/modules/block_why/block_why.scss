@@ -48,6 +48,7 @@
         height: vw(204);
         top: vw(248);
         left: vw(70);
+        background: url('../img/round2.svg') 50% / 100% no-repeat;
         @media all and (max-width: 1023px) {
             width: 94px;
             height: 94px;
@@ -60,6 +61,7 @@
         height: vw(80);
         top: vw(530);
         left: vw(147);
+        background: url('../img/round3.svg') 50% / 100% no-repeat;
         @media all and (max-width: 1023px) {
             width: 80px;
             height: 80px;
@@ -73,10 +75,12 @@
         height: vw(299);
         top: vw(-42);
         left: vw(-82);
+        background: url('../img/line3.svg') 50% / 100% no-repeat;
         @media all and (max-width: 1023px) {
             display: none;
         }
         &--mob {
+            background: url('../img/line4.svg') 50% / 288px no-repeat;
             display: none;
             @media all and (max-width: 1023px) {
                 display: block;

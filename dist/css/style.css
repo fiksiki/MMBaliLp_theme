@@ -2033,6 +2033,13 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 @font-face {
   font-family: "Gilroy";
   font-display: swap;
+  src: url("../fonts/Gilroy-Black.woff2") format("woff2"), url("../fonts/Gilroy-Black.woff") format("woff"), url("../fonts/Gilroy-Black.ttf") format("ttf");
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  font-display: swap;
   src: url("../fonts/Gilroy-Bold.woff2") format("woff2"), url("../fonts/Gilroy-Bold.woff") format("woff"), url("../fonts/Gilroy-Bold.ttf") format("ttf");
   font-weight: 700;
 }
@@ -2040,8 +2047,15 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 @font-face {
   font-family: "Gilroy";
   font-display: swap;
-  src: url("../fonts/Gilroy-Black.woff2") format("woff2"), url("../fonts/Gilroy-Black.woff") format("woff"), url("../fonts/Gilroy-Black.ttf") format("ttf");
-  font-weight: 900;
+  src: url("../fonts/Gilroy-Extrabold.woff2") format("woff2"), url("../fonts/Gilroy-Extrabold.woff") format("woff"), url("../fonts/Gilroy-Extrabold.ttf") format("ttf");
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  font-display: swap;
+  src: url("../fonts/Gilroy-Heavy.woff2") format("woff2"), url("../fonts/Gilroy-Heavy.woff") format("woff"), url("../fonts/Gilroy-Heavy.ttf") format("ttf");
+  font-weight: 800;
 }
 
 @font-face {
@@ -2077,20 +2091,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   font-display: swap;
   src: url("../fonts/Gilroy-Semibold.woff2") format("woff2"), url("../fonts/Gilroy-Semibold.woff") format("woff"), url("../fonts/Gilroy-Semibold.ttf") format("ttf");
   font-weight: 600;
-}
-
-@font-face {
-  font-family: "Gilroy";
-  font-display: swap;
-  src: url("../fonts/Gilroy-Extrabold.woff2") format("woff2"), url("../fonts/Gilroy-Extrabold.woff") format("woff"), url("../fonts/Gilroy-Extrabold.ttf") format("ttf");
-  font-weight: 800;
-}
-
-@font-face {
-  font-family: "Gilroy";
-  font-display: swap;
-  src: url("../fonts/Gilroy-Heavy.woff2") format("woff2"), url("../fonts/Gilroy-Heavy.woff") format("woff"), url("../fonts/Gilroy-Heavy.ttf") format("ttf");
-  font-weight: 800;
 }
 
 @font-face {
@@ -2834,6 +2834,9 @@ svg * {
   margin-bottom: 9.0625vw;
 }
 
+.no-webp .main_first__house{
+  background: url("../img/home.png") 50%/100% no-repeat; }
+
 .main_first__house {
   width: 50.46875vw;
   height: 40.9895833333vw;
@@ -2841,6 +2844,9 @@ svg * {
   bottom: 15px;
   z-index: 1;
 }
+
+.no-webp .main_first__sea{
+  background: url("../img/bg_sea.png") 50%/cover no-repeat; }
 
 .main_first__sea {
   width: 100vw;
@@ -2851,11 +2857,6 @@ svg * {
   z-index: 0;
 }
 
-.main_first__sea img {
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
 .main_first__leafl {
   width: 26.7708333333vw;
   height: 26.25vw;
@@ -2863,6 +2864,12 @@ svg * {
   bottom: 0vw;
   z-index: 2;
 }
+
+.no-webp .main_first__leafl--pc{
+  background: url("../img/leaf7.png") 50%/100% no-repeat; }
+
+.no-webp .main_first__leafl--mob{
+  background: url("../img/leaf12.png") 50%/100% no-repeat; }
 
 .main_first__leafl--mob {
   display: none;
@@ -2876,9 +2883,18 @@ svg * {
   z-index: 2;
 }
 
+.no-webp .main_first__leafr--pc{
+  background: url("../img/leaf8.png") 50%/100% no-repeat; }
+
+.no-webp .main_first__leafr--mob{
+  background: url("../img/leaf13.png") 50%/100% no-repeat; }
+
 .main_first__leafr--mob {
   display: none;
 }
+
+.no-webp .main_first__leaftl{
+  background: url("../img/leaf10.png") 50%/100% no-repeat; }
 
 .main_first__leaftl {
   width: 14.0625vw;
@@ -2891,10 +2907,16 @@ svg * {
 .main_first__leaftr {
   width: 14.21875vw;
   height: 14.0625vw;
-  top: -7.8125vw;
+  top: -4.6875vw;
   right: 0;
   z-index: 3;
 }
+
+.no-webp .main_first__leaftr--pc{
+  background: url("../img/leaf9.png") 50%/100% no-repeat; }
+
+.no-webp .main_first__leaftr--mob{
+  background: url("../img/leaf11.png") 50%/100% no-repeat; }
 
 .main_first__leaftr--mob {
   display: none;
@@ -2906,6 +2928,7 @@ svg * {
   top: 3.4895833333vw;
   left: 0.4166666667vw;
   z-index: 1;
+  background: url("../img/round2.svg") 50%/100% no-repeat;
 }
 
 .main_first__title {
@@ -2992,6 +3015,7 @@ svg * {
   height: 10.625vw;
   top: 12.9166666667vw;
   left: 3.6458333333vw;
+  background: url("../img/round2.svg") 50%/100% no-repeat;
 }
 
 .block_why__round2 {
@@ -2999,6 +3023,7 @@ svg * {
   height: 4.1666666667vw;
   top: 27.6041666667vw;
   left: 7.65625vw;
+  background: url("../img/round3.svg") 50%/100% no-repeat;
 }
 
 .block_why__line {
@@ -3006,9 +3031,11 @@ svg * {
   height: 15.5729166667vw;
   top: -2.1875vw;
   left: -4.2708333333vw;
+  background: url("../img/line3.svg") 50%/100% no-repeat;
 }
 
 .block_why__line--mob {
+  background: url("../img/line4.svg") 50%/288px no-repeat;
   display: none;
 }
 
@@ -3154,7 +3181,11 @@ svg * {
   z-index: 1;
   left: -5.625vw;
   top: 8.75vw;
+  background: url("../img/around.svg") 50%/100% no-repeat;
 }
+
+.no-webp .main_numbers__tree{
+  background: url("../img/tree6.png") 50%/100% no-repeat; }
 
 .main_numbers__tree {
   width: 25.5729166667vw;
@@ -3163,6 +3194,9 @@ svg * {
   bottom: 2.0833333333vw;
   left: -7.8125vw;
 }
+
+.no-webp .main_numbers__tree3{
+  background: url("../img/tree7.png") 50%/100% no-repeat; }
 
 .main_numbers__tree3 {
   display: none;
@@ -3175,6 +3209,7 @@ svg * {
   right: 0.3645833333vw;
   z-index: 1;
   top: 4.9479166667vw;
+  background: url("../img/round2.svg") 50%/100% no-repeat;
 }
 
 .main_numbers__round2 {
@@ -3183,7 +3218,11 @@ svg * {
   z-index: 1;
   top: -2.4479166667vw;
   right: 23.6458333333vw;
+  background: url("../img/round3.svg") 50%/100% no-repeat;
 }
+
+.no-webp .main_numbers__tree2{
+  background: url("../img/tree3.png") 50%/100% no-repeat; }
 
 .main_numbers__tree2 {
   width: 16.3020833333vw;
@@ -3373,6 +3412,7 @@ svg * {
   height: 10.5208333333vw;
   top: -2.0833333333vw;
   left: -5.9375vw;
+  background: url("../img/round2.svg") 50%/100% no-repeat;
 }
 
 .main_services__block--dev .main_services__round2 {
@@ -3380,7 +3420,11 @@ svg * {
   height: 4.5833333333vw;
   bottom: 10.0520833333vw;
   right: 2.3958333333vw;
+  background: url("../img/round3.svg") 50%/100% no-repeat;
 }
+
+.no-webp .main_services__block--dev .main_services__tree{
+  background: url("../img/tree4.png") 50%/100% no-repeat; }
 
 .main_services__block--dev .main_services__tree {
   width: 22.3958333333vw;
@@ -3391,6 +3435,7 @@ svg * {
 
 .main_services__block--dev .main_services__tree--mob {
   display: none;
+  background: url("../img/tree4-mob.svg") 50%/100% no-repeat;
 }
 
 .main_services__block--dev .main_services__img img {
@@ -3405,6 +3450,7 @@ svg * {
   height: 10.5208333333vw;
   bottom: -2.96875vw;
   right: 5.46875vw;
+  background: url("../img/round2.svg") 50%/100% no-repeat;
 }
 
 .main_services__block--target .main_services__round2 {
@@ -3412,7 +3458,11 @@ svg * {
   height: 3.3333333333vw;
   right: 3.0208333333vw;
   bottom: 9.0625vw;
+  background: url("../img/round3.svg") 50%/100% no-repeat;
 }
+
+.no-webp .main_services__block--target .main_services__tree{
+  background: url("../img/tree5.png") 50%/100% no-repeat; }
 
 .main_services__block--target .main_services__tree {
   width: 12.7083333333vw;
@@ -3420,6 +3470,9 @@ svg * {
   right: 0;
   top: -9.375vw;
 }
+
+.no-webp .main_services__block--target .main_services__tree--mob{
+  background: url("../img/tree5-mob.png") 50%/100% no-repeat; }
 
 .main_services__block--target .main_services__tree--mob {
   display: none;
@@ -3431,6 +3484,9 @@ svg * {
   left: 0;
   top: 0;
 }
+
+.no-webp .main_services__block--seo .main_services__tree{
+  background: url("../img/tree3.png") 50%/100% no-repeat; }
 
 .main_services__block--seo .main_services__tree {
   bottom: -2.65625vw;
@@ -3444,6 +3500,7 @@ svg * {
   height: 19.84375vw;
   top: -10.15625vw;
   right: -10.6770833333vw;
+  background: url("../img/square2.svg") 50%/100% no-repeat;
 }
 
 .main_services__block--seo .main_services__img img {
@@ -3458,6 +3515,7 @@ svg * {
   height: 7.9166666667vw;
   top: 0.625vw;
   left: 2.2395833333vw;
+  background: url("../img/round2.svg") 50%/100% no-repeat;
 }
 
 .main_services__block--crm .main_services__trigle {
@@ -3465,6 +3523,7 @@ svg * {
   height: 14.6354166667vw;
   right: 2.3958333333vw;
   bottom: 8.5416666667vw;
+  background: url("../img/trigle.svg") 50%/100% no-repeat;
 }
 
 .main_services__block--crm .main_services__round2 {
@@ -3472,6 +3531,7 @@ svg * {
   height: 13.28125vw;
   right: 0.2604166667vw;
   bottom: -3.8541666667vw;
+  background: url("../img/round2.svg") 50%/100% no-repeat;
 }
 
 .main_services__block--crm .main_services__img img {
@@ -3545,12 +3605,18 @@ svg * {
      object-fit: contain;
 }
 
+.no-webp .main_cases__leaf--leafl{
+  background: url("../img/leaf5.png") 50%/100% no-repeat; }
+
 .main_cases__leaf--leafl {
   bottom: 11.9791666667vw;
   left: 0;
   width: 22.8645833333vw;
   height: 33.3854166667vw;
 }
+
+.no-webp .main_cases__leaf--leafr{
+  background: url("../img/leaf6.png") 50%/100% no-repeat; }
 
 .main_cases__leaf--leafr {
   right: -10.9375vw;
@@ -4144,6 +4210,7 @@ svg * {
   font-size: 0;
   z-index: 3;
   pointer-events: none;
+  background: url("../img/round2.svg") 50%/100% no-repeat;
 }
 
 .block_info__round img {
@@ -4230,6 +4297,9 @@ svg * {
      object-fit: contain;
 }
 
+.no-webp .block_info__tree{
+  background: url("../img/tree2.png") 50%/100% no-repeat; }
+
 .block_info__tree {
   position: absolute;
   font-size: 0;
@@ -4247,6 +4317,9 @@ svg * {
   -o-object-fit: contain;
      object-fit: contain;
 }
+
+.no-webp .block_info__house{
+  background: url("../img/house.png") 50%/100% no-repeat; }
 
 .block_info__house {
   position: absolute;
@@ -4266,11 +4339,14 @@ svg * {
      object-fit: contain;
 }
 
+.no-webp .block_info__tree2{
+  background: url("../img/tree3.png") 50%/100% no-repeat; }
+
 .block_info__tree2 {
   position: absolute;
   font-size: 0;
   right: 0;
-  bottom: 0;
+  bottom: -2.6041666667vw;
   width: 16.3020833333vw;
   height: 21.6145833333vw;
   pointer-events: none;
@@ -4293,6 +4369,7 @@ svg * {
   width: 12.5520833333vw;
   height: 8.0208333333vw;
   z-index: 0;
+  background: url("../img/unbrella.svg") 50%/100% no-repeat;
 }
 
 .block_info__umbrella img {
@@ -4378,12 +4455,18 @@ svg * {
      object-fit: contain;
 }
 
+.no-webp .main_prefs__leaf--leafl{
+  background: url("../img/leaf5.png") 50%/100% no-repeat; }
+
 .main_prefs__leaf--leafl {
   bottom: -0.5208333333vw;
   left: 0;
   width: 22.8645833333vw;
   height: 33.3854166667vw;
 }
+
+.no-webp .main_prefs__leaf--leafr{
+  background: url("../img/leaf6.png") 50%/100% no-repeat; }
 
 .main_prefs__leaf--leafr {
   right: -10.9375vw;
@@ -4505,6 +4588,7 @@ svg * {
   left: -3.4895833333vw;
   width: 8.90625vw;
   height: 8.90625vw;
+  background: url("../img/round2.svg") 50%/100% no-repeat;
 }
 
 .block_form__round img {
@@ -4513,6 +4597,9 @@ svg * {
   -o-object-fit: contain;
      object-fit: contain;
 }
+
+.no-webp .block_form__facebook{
+  background: url("../img/facebook.png") 50%/100% no-repeat; }
 
 .block_form__facebook {
   position: absolute;
@@ -4531,6 +4618,9 @@ svg * {
      object-fit: contain;
 }
 
+.no-webp .block_form__gift{
+  background: url("../img/gift.png") 50%/100% no-repeat; }
+
 .block_form__gift {
   position: absolute;
   font-size: 0;
@@ -4548,6 +4638,9 @@ svg * {
      object-fit: contain;
 }
 
+.no-webp .block_form__telegram{
+  background: url("../img/telegram.png") 50%/100% no-repeat; }
+
 .block_form__telegram {
   position: absolute;
   font-size: 0;
@@ -4564,6 +4657,9 @@ svg * {
   -o-object-fit: contain;
      object-fit: contain;
 }
+
+.no-webp .block_form__instagram{
+  background: url("../img/instagram.png") 50%/100% no-repeat; }
 
 .block_form__instagram {
   position: absolute;
@@ -4664,6 +4760,9 @@ svg * {
   overflow: hidden;
 }
 
+.no-webp .main_quality__leaf-mob{
+  background: url("../img/leaf4.png") 50%/100% no-repeat; }
+
 .main_quality__leaf-mob {
   display: none;
   pointer-events: none;
@@ -4679,6 +4778,7 @@ svg * {
 .main_quality__line-mob {
   display: none;
   pointer-events: none;
+  background: url("../img/line2.svg") 50%/100% no-repeat;
 }
 
 .main_quality__line-mob img {
@@ -4696,6 +4796,7 @@ svg * {
   top: 3.9583333333vw;
   left: 20.6770833333vw;
   pointer-events: none;
+  background: url("../img/star.svg") 50%/100% no-repeat;
 }
 
 .main_quality__star img {
@@ -4713,6 +4814,7 @@ svg * {
   height: 32.9166666667vw;
   top: 6.7708333333vw;
   left: 29.0625vw;
+  background: url("../img/line.svg") 50%/100% no-repeat;
 }
 
 .main_quality__line img {
@@ -4730,6 +4832,7 @@ svg * {
   height: 7.8645833333vw;
   top: 5.0520833333vw;
   left: 1.7708333333vw;
+  background: url("../img/round.svg") 50%/100% no-repeat;
 }
 
 .main_quality__round img {
@@ -4738,6 +4841,9 @@ svg * {
   -o-object-fit: contain;
      object-fit: contain;
 }
+
+.no-webp .main_quality__tree{
+  background: url("../img/tree.png") 50%/100% no-repeat; }
 
 .main_quality__tree {
   position: absolute;
@@ -4764,6 +4870,7 @@ svg * {
   width: 9.5833333333vw;
   height: 10.9375vw;
   font-size: 0;
+  background: url("../img/square.svg") 50%/100% no-repeat;
 }
 
 .main_quality__square img {
@@ -4772,6 +4879,9 @@ svg * {
   -o-object-fit: contain;
      object-fit: contain;
 }
+
+.no-webp .main_quality__leaf{
+  background: url("../img/leaf3.png") 50%/100% no-repeat; }
 
 .main_quality__leaf {
   position: absolute;
@@ -4914,12 +5024,18 @@ svg * {
      object-fit: contain;
 }
 
+.no-webp .main_form__leaf--leafl{
+  background: url("../img/leaf.png") 50%/100% no-repeat; }
+
 .main_form__leaf--leafl {
   bottom: 4.7916666667vw;
   left: 0;
   width: 22.8645833333vw;
   height: 33.3854166667vw;
 }
+
+.no-webp .main_form__leaf--leafr{
+  background: url("../img/leaf2.png") 50%/100% no-repeat; }
 
 .main_form__leaf--leafr {
   right: -1.5625vw;
@@ -5083,7 +5199,11 @@ svg * {
 
 .main_maps__map--mob {
   display: none;
+  background: url("../img/map_mobs.svg") 50%/100% no-repeat;
 }
+
+.no-webp .main_maps__map--pc{
+  background: url("../img/map.png") 50%/100% no-repeat; }
 
 .main_maps__map svg {
   width: 100%;
@@ -7605,9 +7725,75 @@ svg * {
   }
 }
 
+.webp .main_first__house{ background: url(../img/home.webp) 50%/100% no-repeat; }
+
+.webp .main_first__sea{ background: url(../img/bg_sea.webp) 50%/cover no-repeat; }
+
+.webp .main_first__leafl--pc{ background: url(../img/leaf7.webp) 50%/100% no-repeat; }
+
+.webp .main_first__leafl--mob{ background: url(../img/leaf12.webp) 50%/100% no-repeat; }
+
+.webp .main_first__leafr--pc{ background: url(../img/leaf8.webp) 50%/100% no-repeat; }
+
+.webp .main_first__leafr--mob{ background: url(../img/leaf13.webp) 50%/100% no-repeat; }
+
+.webp .main_first__leaftl{ background: url(../img/leaf10.webp) 50%/100% no-repeat; }
+
+.webp .main_first__leaftr--pc{ background: url(../img/leaf9.webp) 50%/100% no-repeat; }
+
+.webp .main_first__leaftr--mob{ background: url(../img/leaf11.webp) 50%/100% no-repeat; }
+
 .webp .block_why:before{ background: url(../img/bg_top_why.webp) 50%/100% no-repeat; }
 
+.webp .main_numbers__tree{ background: url(../img/tree6.webp) 50%/100% no-repeat; }
+
+.webp .main_numbers__tree3{ background: url(../img/tree7.webp) 50%/100% no-repeat; }
+
+.webp .main_numbers__tree2{ background: url(../img/tree3.webp) 50%/100% no-repeat; }
+
+.webp .main_services__block--dev .main_services__tree{ background: url(../img/tree4.webp) 50%/100% no-repeat; }
+
+.webp .main_services__block--target .main_services__tree{ background: url(../img/tree5.webp) 50%/100% no-repeat; }
+
+.webp .main_services__block--target .main_services__tree--mob{ background: url(../img/tree5-mob.webp) 50%/100% no-repeat; }
+
+.webp .main_services__block--seo .main_services__tree{ background: url(../img/tree3.webp) 50%/100% no-repeat; }
+
+.webp .main_cases__leaf--leafl{ background: url(../img/leaf5.webp) 50%/100% no-repeat; }
+
+.webp .main_cases__leaf--leafr{ background: url(../img/leaf6.webp) 50%/100% no-repeat; }
+
+.webp .block_info__tree{ background: url(../img/tree2.webp) 50%/100% no-repeat; }
+
+.webp .block_info__house{ background: url(../img/house.webp) 50%/100% no-repeat; }
+
+.webp .block_info__tree2{ background: url(../img/tree3.webp) 50%/100% no-repeat; }
+
+.webp .main_prefs__leaf--leafl{ background: url(../img/leaf5.webp) 50%/100% no-repeat; }
+
+.webp .main_prefs__leaf--leafr{ background: url(../img/leaf6.webp) 50%/100% no-repeat; }
+
+.webp .block_form__facebook{ background: url(../img/facebook.webp) 50%/100% no-repeat; }
+
+.webp .block_form__gift{ background: url(../img/gift.webp) 50%/100% no-repeat; }
+
+.webp .block_form__telegram{ background: url(../img/telegram.webp) 50%/100% no-repeat; }
+
+.webp .block_form__instagram{ background: url(../img/instagram.webp) 50%/100% no-repeat; }
+
+.webp .main_quality__leaf-mob{ background: url(../img/leaf4.webp) 50%/100% no-repeat; }
+
+.webp .main_quality__tree{ background: url(../img/tree.webp) 50%/100% no-repeat; }
+
+.webp .main_quality__leaf{ background: url(../img/leaf3.webp) 50%/100% no-repeat; }
+
+.webp .main_form__leaf--leafl{ background: url(../img/leaf.webp) 50%/100% no-repeat; }
+
+.webp .main_form__leaf--leafr{ background: url(../img/leaf2.webp) 50%/100% no-repeat; }
+
 .webp .main_maps:before{ background: url(../img/bg_top_map.webp) 50%/100% no-repeat; }
+
+.webp .main_maps__map--pc{ background: url(../img/map.webp) 50%/100% no-repeat; }
 
 .webp .modal__tree{ background: url(../img/tree2.webp) 50%/100% no-repeat; }
 

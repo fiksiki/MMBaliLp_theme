@@ -25,12 +25,14 @@
             left: 0;
             width: vw(439);
             height: vw(641);
+            background: url('../img/leaf.png') 50% / 100% no-repeat;
         }
         &--leafr {
             right: vw(-30);
             bottom: vw(90);
             width: vw(439);
             height: vw(641);
+            background: url('../img/leaf2.png') 50% / 100% no-repeat;
         }
     }
     &__done {

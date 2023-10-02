@@ -109,6 +109,7 @@
                 height: vw(202);
                 top: vw(-40);
                 left: vw(-114);
+                background: url('../img/round2.svg') 50% / 100% no-repeat;
                 @media all and (max-width: 1023px) {
                     width: 93px;
                     height: 93px;
@@ -121,6 +122,7 @@
                 height: vw(88);
                 bottom: vw(193);
                 right: vw(46);
+                background: url('../img/round3.svg') 50% / 100% no-repeat;
                 @media all and (max-width: 1023px) {
                     display: none;
                 }
@@ -130,6 +132,7 @@
                 height: vw(282);
                 bottom: vw(60);
                 right: 0;
+                background: url('../img/tree4.png') 50% / 100% no-repeat;
                 @media all and (max-width: 1023px) {
                     width: 161px;
                     height: 138px;
@@ -138,6 +141,7 @@
                 }
                 &--mob {
                     display: none;
+                    background: url('../img/tree4-mob.svg') 50% / 100% no-repeat;
                     @media all and (max-width: 1023px) {
                         display: block;
                     }
@@ -165,6 +169,7 @@
                 height: vw(202);
                 bottom: vw(-57);
                 right: vw(105);
+                background: url('../img/round2.svg') 50% / 100% no-repeat;
                 @media all and (max-width: 1023px) {
                     width: 109px;
                     height: 109px;
@@ -177,6 +182,7 @@
                 height: vw(64);    
                 right: vw(58);
                 bottom: vw(174);
+                background: url('../img/round3.svg') 50% / 100% no-repeat;
                 @media all and (max-width: 1023px) {
                     width: 53px;
                     height: 53px;
@@ -189,6 +195,7 @@
                 height: vw(363);
                 right: 0;
                 top: vw(-180);
+                background: url('../img/tree5.png') 50% / 100% no-repeat;
                 @media all and (max-width: 1023px) {
                     display: none;
                     width: 151px;
@@ -196,6 +203,7 @@
                     right: unset;
                 }
                 &--mob {
+                    background: url('../img/tree5-mob.png') 50% / 100% no-repeat;
                     display: none;
                     @media all and (max-width: 1023px) {
                         display: block;
@@ -224,6 +232,7 @@
                 right: vw(-82);
                 width: vw(440);
                 height: vw(564);
+                background: url('../img/tree3.png') 50% / 100% no-repeat;
                 @media all and (max-width: 1023px) {
                     width: 210px;
                     height: 304px;
@@ -238,6 +247,7 @@
                 height: vw(381);
                 top: vw(-195);
                 right: vw(-205);
+                background: url('../img/square2.svg') 50% / 100% no-repeat;
                 @media all and (max-width: 1023px) {
                     width: 150px;
                     height: 181px;
@@ -268,6 +278,7 @@
                 height: vw(152);
                 top: vw(12);
                 left: vw(43);
+                background: url('../img/round2.svg') 50% / 100% no-repeat;
                 @media all and (max-width: 1023px) {
                     width: 96px;
                     height: 96px;
@@ -280,6 +291,7 @@
                 height: vw(281);
                 right: vw(46);
                 bottom: vw(164);
+                background: url('../img/trigle.svg') 50% / 100% no-repeat;
                 @media all and (max-width: 1023px) {
                     width: 138px;
                     height: 145px;
@@ -293,6 +305,7 @@
                 height: vw(255);
                 right: vw(5);
                 bottom: vw(-74);
+                background: url('../img/round2.svg') 50% / 100% no-repeat;
                 @media all and (max-width: 1023px) {
                     width: 116px;
                     height: 116px;

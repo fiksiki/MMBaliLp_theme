@@ -16,6 +16,7 @@
         z-index: 1;
         left: vw(-108);
         top: vw(168);
+        background: url('../img/around.svg') 50% / 100% no-repeat;
         @media all and (max-width: 1023px) {
             display: none;
         }
@@ -26,6 +27,7 @@
         z-index: 1;
         bottom: vw(40);
         left: vw(-150);
+        background: url('../img/tree6.png') 50% / 100% no-repeat;
         @media all and (max-width: 1023px) {
             left: -90px;
             width: 251px;
@@ -37,6 +39,7 @@
     &__tree3 {
         display: none;
         z-index: 3;
+        background: url('../img/tree7.png') 50% / 100% no-repeat;
         @media all and (max-width: 1023px) {
             display: block;
             width: 131px;
@@ -51,6 +54,7 @@
         right: vw(7);
         z-index: 1;
         top: vw(95);
+        background: url('../img/round2.svg') 50% / 100% no-repeat;
         @media all and (max-width: 1023px) {
             width: 70px;
             height: 70px;
@@ -64,6 +68,7 @@
         z-index: 1;
         top: vw(-47);
         right: vw(454);
+        background: url('../img/round3.svg') 50% / 100% no-repeat;
         @media all and (max-width: 1023px) {
             display: none;
         }
@@ -74,6 +79,7 @@
         right: 0;
         bottom: 0;
         z-index: 1;
+        background: url('../img/tree3.png') 50% / 100% no-repeat;
         @media all and (max-width: 1023px) {
             display: none;
         }

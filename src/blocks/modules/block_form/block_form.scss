@@ -61,6 +61,7 @@
         left: vw(-67);
         width: vw(171);
         height: vw(171);
+        background: url('../img/round2.svg') 50% / 100% no-repeat;
         @media all and (max-width: 1023px) {
             width: 85px;
             height: 85px;
@@ -86,6 +87,7 @@
         height: vw(191);
         top: vw(37);
         right: vw(355);
+        background: url('../img/facebook.png') 50% / 100% no-repeat;
         @media all and (max-width: 1023px) {
             width: 100px;
             height: 102px;
@@ -107,6 +109,7 @@
         pointer-events: none;
         top: vw(-96);
         width: vw(308);
+        background: url('../img/gift.png') 50% / 100% no-repeat;
         height: vw(308);
         @media all and (max-width: 1023px) {
             right: 50%;
@@ -130,6 +133,7 @@
         pointer-events: none;
         width: vw(133);
         height: vw(140);
+        background: url('../img/telegram.png') 50% / 100% no-repeat;
         @media all and (max-width: 1023px) {
             top: unset;
             bottom: 30px;
@@ -151,6 +155,7 @@
         height: vw(254);
         bottom: vw(-35);
         right: vw(-120);
+        background: url('../img/instagram.png') 50% / 100% no-repeat;
         @media all and (max-width: 1023px) {
             bottom: 138px;
             width: 150px;
