@@ -1,0 +1,48 @@
+.breadcrums {
+    margin-bottom: vw(50);
+    position: relative;
+    z-index: 2;
+    @media all and (max-width: 1023px) {
+        margin-bottom: 24px;
+    }
+    &__items {
+        display: flex;
+        align-items: center;
+    }
+    &__splash {
+        color: #A5A5A5;
+        font-size: vw(16);
+        font-style: normal;
+        font-weight: 500;
+        line-height: 140%;
+        margin: 0 5px;
+        @media all and (max-width: 1023px) {
+            font-size: 16px;
+        }
+    }
+    span {
+        color: #A5A5A5;
+        font-size: vw(16);
+        font-style: normal;
+        font-weight: 500;
+        line-height: 140%;
+        @media all and (max-width: 1023px) {
+            font-size: 16px;
+        }
+        a {
+            text-decoration: none;
+            display: block;
+            background-image: linear-gradient(currentColor,currentColor);
+            background-position: 0 100%;
+            background-repeat: no-repeat;
+            transition: background-size .3s;
+            background-size: 0 1px;
+            &:hover {
+                background-size: 100% 1px;
+            }
+            span {
+                color: #0D0D0D;
+            }
+        }
+    }
+}

@@ -1,0 +1,187 @@
+.text_form {
+    margin-top: vw(50);
+    padding-bottom: vw(256);
+    @media all and (max-width: 1023px) {
+        margin-top: 20px;
+        padding-bottom: 80px;
+    }
+    &__in {
+        border-radius: 16px;
+        background: var(--blue, #7FBAFF);
+        padding: vw(60) vw(90);
+        position: relative;
+        @media all and (max-width: 1023px) {
+            padding: 40px 16px;
+        }
+        form {
+            display: flex;
+            justify-content: space-between;
+            @media all and (max-width: 1023px) {
+                flex-direction: column;
+            }
+        }
+    }
+    &__line {
+        position: absolute;
+        background: url("data:image/svg+xml,%3Csvg width='34' height='25' viewBox='0 0 34 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.59782 24.1175L5.72592 11.7938L18.0497 14.9219L21.1778 2.59815L33.5015 5.72625' stroke='%23FFD130' stroke-width='4'/%3E%3C/svg%3E%0A") 50% / 100% no-repeat;
+        width: vw(34);
+        height: vw(25);
+        top: vw(35);
+        pointer-events: none;
+        left: vw(516);
+        @media all and (max-width: 1023px) {
+            width: 22px;
+            height: 17px;
+            top: 23px;
+            right: 30px;
+            left: unset;
+        }
+    }
+    &__line2 {
+        position: absolute;
+        background: url("data:image/svg+xml,%3Csvg width='34' height='29' viewBox='0 0 34 29' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.999749 3.54237L14.8158 2.27369L16.0845 16.0898L29.9006 14.8211L31.1692 28.6371' stroke='%23FFD130' stroke-width='4'/%3E%3C/svg%3E%0A") 50% / 100% no-repeat;
+        width: vw(34);
+        height: vw(29);
+        top: vw(142);
+        pointer-events: none;
+        left: vw(513);
+        @media all and (max-width: 1023px) {
+            width: 25px;
+            height: 22px;
+            top: 71px;
+            right: 19px;
+            left: unset;
+        }
+    }
+    &__star {
+        position: absolute;
+        background: url("data:image/svg+xml,%3Csvg width='112' height='109' viewBox='0 0 112 109' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M61.3561 36.2992L62.0074 39.4949L64.5604 37.4655L85.5579 20.7742L72.7664 44.3512L71.2112 47.2178L74.4714 47.3042L101.285 48.015L76.3315 57.8538L73.2975 59.05L75.7394 61.2118L95.8233 78.992L70.3833 70.4889L67.2901 69.4551L67.7712 72.6808L71.7275 99.2108L57.7049 76.3446L56 73.5643L54.2951 76.3446L40.2725 99.2108L44.2288 72.6808L44.7099 69.4551L41.6167 70.4889L16.1767 78.992L36.2606 61.2118L38.7025 59.05L35.6685 57.8538L10.7146 48.015L37.5286 47.3042L40.7888 47.2178L39.2336 44.3512L26.4421 20.7742L47.4396 37.4655L49.9926 39.4949L50.6439 36.2992L56 10.016L61.3561 36.2992Z' stroke='%23FFD130' stroke-width='4'/%3E%3C/svg%3E%0A") 50% / 100% no-repeat;
+        width: vw(112);
+        height: vw(109);
+        pointer-events: none;
+        left: vw(638);
+        bottom: vw(10);
+        @media all and (max-width: 1023px) {
+            display: none;
+        }
+    }
+    &__l-side {
+        width: calc(50% - vw(80));
+        position: relative;
+        z-index: 2;
+        @media all and (max-width: 1023px) {
+            width: 100%;
+        }
+    }
+    &__r-side {
+        width: calc(50% - vw(80));
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        position: relative;
+        z-index: 2;
+        @media all and (max-width: 1023px) {
+            width: 100%;
+            flex-direction: column;
+        }
+    }
+    &__title {
+        margin-bottom: vw(20);
+        color: #FFF;
+        font-size: vw(40);
+        font-style: normal;
+        font-weight: 600;
+        line-height: 130%;
+        text-transform: uppercase;
+        @media all and (max-width: 1023px) {
+            font-size: 28px;
+            margin-bottom: 24px;
+        }
+    }
+    &__text {
+        margin-bottom: vw(40);
+        color: #FFF;
+        font-size: vw(24);
+        font-style: normal;
+        font-weight: 500;
+        line-height: 130%;
+        @media all and (max-width: 1023px) {
+            margin-bottom: 40px;
+            font-size: 24px;
+        }
+    }
+    input {
+        &[type="text"], &[type="tel"] {
+            width: calc(50% - vw(15));
+            margin-bottom: vw(35);
+            border-radius: 4px;
+            border: 0;
+            padding: vw(15) vw(30);
+            color: #636164;
+            font-size: vw(16);
+            font-style: normal;
+            font-weight: 500;
+            height: vw(50);
+            line-height: normal;
+            @media all and (max-width: 1023px) {
+                width: 100%;
+                margin-bottom: 24px;
+                font-size: 16px;
+                height: 50px;
+                padding: 15px 30px;
+            }
+        }
+        &[type="submit"] {
+            width: 100%;
+            border: 0;
+            cursor: pointer;
+            border-radius: 4px;
+            color: var(--Color_fonts_def_black, #0D0D0D);
+            text-align: center;
+            font-size: vw(16);
+            font-style: normal;
+            display: block;
+            font-weight: 600;
+            line-height: normal;
+            letter-spacing: vw(0.48);
+            padding: vw(15);
+            &:hover {
+                color: #FFD130;
+            }
+            @media all and (max-width: 1023px) {
+                font-size: 16px;
+                padding: 15px;
+                margin-bottom: 24px;
+                letter-spacing: 0.48px;
+            }
+        }
+    }
+    &__btn {
+        width: calc(50% - vw(15));
+        margin-bottom: vw(50);
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        color: var(--color_background_def_gray, #F5F5F5);
+        font-size: vw(16);
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        letter-spacing: vw(0.48);
+        border-radius: 4px;
+        transition: all .3s ease;
+        border: 1px solid #FFD130;
+        padding: vw(14);
+        &:hover {
+            background: #FFD130;
+            color: #0D0D0D;
+        }
+        @media all and (max-width: 1023px) {
+            margin-bottom: 24px;
+            padding: 15px;
+            font-size: 16px;
+            width: 100%;
+        }
+    }
+}
