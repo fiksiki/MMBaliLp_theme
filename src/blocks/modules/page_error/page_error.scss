@@ -1,0 +1,40 @@
+.page_error {
+    padding: vw(100) 0;
+    background: var(--blue, #7FBAFF);
+    &__title {
+        color: #FFF;
+        font-size: vw(449);
+        font-style: normal;
+        text-align: center;
+        font-weight: 700;
+        line-height: normal;
+        margin-bottom: vw(50);
+    }
+    &__text {
+        color: #FFF;
+        text-align: center;
+        font-size: vw(40);
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-bottom: vw(50);
+    }
+    &__link {
+        text-align: center;
+        a {
+            text-decoration: none;
+            max-width: vw(380);
+            border-radius: 4px;
+            width: 100%;
+            display: inline-block;
+            padding: vw(15);
+            color: var(--Color_fonts_def_black, #0D0D0D);
+            text-align: center;
+            font-size: vw(16);
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            letter-spacing: vw(0.48);
+        }
+    }
+}
