@@ -2033,6 +2033,20 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 @font-face {
   font-family: "Gilroy";
   font-display: swap;
+  src: url("../fonts/Gilroy-Extrabold.woff2") format("woff2"), url("../fonts/Gilroy-Extrabold.woff") format("woff"), url("../fonts/Gilroy-Extrabold.ttf") format("ttf");
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  font-display: swap;
+  src: url("../fonts/Gilroy-Black.woff2") format("woff2"), url("../fonts/Gilroy-Black.woff") format("woff"), url("../fonts/Gilroy-Black.ttf") format("ttf");
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  font-display: swap;
   src: url("../fonts/Gilroy-Bold.woff2") format("woff2"), url("../fonts/Gilroy-Bold.woff") format("woff"), url("../fonts/Gilroy-Bold.ttf") format("ttf");
   font-weight: 700;
 }
@@ -2049,6 +2063,20 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   font-display: swap;
   src: url("../fonts/Gilroy-Light.woff2") format("woff2"), url("../fonts/Gilroy-Light.woff") format("woff"), url("../fonts/Gilroy-Light.ttf") format("ttf");
   font-weight: 300;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  font-display: swap;
+  src: url("../fonts/Gilroy-HeavyItalic.woff2") format("woff2"), url("../fonts/Gilroy-HeavyItalic.woff") format("woff"), url("../fonts/Gilroy-HeavyItalic.ttf") format("ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  font-display: swap;
+  src: url("../fonts/Gilroy-Medium.woff2") format("woff2"), url("../fonts/Gilroy-Medium.woff") format("woff"), url("../fonts/Gilroy-Medium.ttf") format("ttf");
+  font-weight: 500;
 }
 
 @font-face {
@@ -2075,36 +2103,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 @font-face {
   font-family: "Gilroy";
   font-display: swap;
-  src: url("../fonts/Gilroy-Medium.woff2") format("woff2"), url("../fonts/Gilroy-Medium.woff") format("woff"), url("../fonts/Gilroy-Medium.ttf") format("ttf");
-  font-weight: 500;
-}
-
-@font-face {
-  font-family: "Gilroy";
-  font-display: swap;
   src: url("../fonts/Gilroy-UltraLight.woff2") format("woff2"), url("../fonts/Gilroy-UltraLight.woff") format("woff"), url("../fonts/Gilroy-UltraLight.ttf") format("ttf");
   font-weight: 400;
-}
-
-@font-face {
-  font-family: "Gilroy";
-  font-display: swap;
-  src: url("../fonts/Gilroy-HeavyItalic.woff2") format("woff2"), url("../fonts/Gilroy-HeavyItalic.woff") format("woff"), url("../fonts/Gilroy-HeavyItalic.ttf") format("ttf");
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: "Gilroy";
-  font-display: swap;
-  src: url("../fonts/Gilroy-Black.woff2") format("woff2"), url("../fonts/Gilroy-Black.woff") format("woff"), url("../fonts/Gilroy-Black.ttf") format("ttf");
-  font-weight: 900;
-}
-
-@font-face {
-  font-family: "Gilroy";
-  font-display: swap;
-  src: url("../fonts/Gilroy-Extrabold.woff2") format("woff2"), url("../fonts/Gilroy-Extrabold.woff") format("woff"), url("../fonts/Gilroy-Extrabold.ttf") format("ttf");
-  font-weight: 800;
 }
 
 body {
@@ -5478,6 +5478,14 @@ svg * {
   justify-content: space-between;
 }
 
+.text_form__in.isSent .wpcf7 {
+  display: none;
+}
+
+.text_form__in.isSent .block_form__done {
+  display: block;
+}
+
 .text_form__line {
   position: absolute;
   background: url("data:image/svg+xml,%3Csvg width='34' height='25' viewBox='0 0 34 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.59782 24.1175L5.72592 11.7938L18.0497 14.9219L21.1778 2.59815L33.5015 5.72625' stroke='%23FFD130' stroke-width='4'/%3E%3C/svg%3E%0A") 50%/100% no-repeat;
@@ -5516,12 +5524,15 @@ svg * {
 
 .text_form__r-side {
   width: calc(50% - 4.1666666667vw);
+  position: relative;
+  z-index: 2;
+}
+
+.text_form__r-side p {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   align-items: flex-start;
-  position: relative;
-  z-index: 2;
 }
 
 .text_form__title {
@@ -5534,6 +5545,10 @@ svg * {
   text-transform: uppercase;
 }
 
+.text_form__done {
+  display: none;
+}
+
 .text_form__text {
   margin-bottom: 2.0833333333vw;
   color: #FFF;
@@ -5543,10 +5558,14 @@ svg * {
   line-height: 130%;
 }
 
-.text_form input[type=text],
-.text_form input[type=tel] {
+.text_form .wpcf7-form-control-wrap {
   width: calc(50% - 0.78125vw);
   margin-bottom: 1.8229166667vw;
+}
+
+.text_form input[type=text],
+.text_form input[type=tel] {
+  width: 100%;
   border-radius: 4px;
   border: 0;
   padding: 0.78125vw 1.5625vw;
@@ -7828,9 +7847,12 @@ svg * {
     width: 100%;
   }
 
+  .text_form__r-side p {
+    flex-direction: column;
+  }
+
   .text_form__r-side {
     width: 100%;
-    flex-direction: column;
   }
 
   .text_form__title {
@@ -7843,10 +7865,13 @@ svg * {
     font-size: 24px;
   }
 
-  .text_form input[type=text],
-  .text_form input[type=tel] {
+  .text_form .wpcf7-form-control-wrap {
     width: 100%;
     margin-bottom: 24px;
+  }
+
+  .text_form input[type=text],
+  .text_form input[type=tel] {
     font-size: 16px;
     height: 50px;
     padding: 15px 30px;
@@ -7882,20 +7907,22 @@ svg * {
   .page_error__round {
     width: 110px;
     height: 110px;
-    top: 92px;
+    top: -168px;
     right: 116px;
   }
 
   .page_error__round2 {
     left: 45px;
-    top: 307px;
+    top: 0;
     width: 37px;
     height: 37px;
+    display: none;
   }
 
   .page_error__round3 {
     right: 39px;
-    top: 414px;
+    top: unset;
+    bottom: 40px;
     width: 37px;
     height: 37px;
   }
@@ -7911,7 +7938,7 @@ svg * {
     background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='26' viewBox='0 0 16 26' fill='none'%3E%3Cpath d='M8.41762 25.0196L12.3544 17.3737L4.70845 13.4369L8.64522 5.79095L0.999275 1.85418' stroke='%23FFD130' stroke-width='4'/%3E%3C/svg%3E") 50%/100% no-repeat;
     width: 16px;
     height: 26px;
-    top: 252px;
+    top: 0;
     right: 92px;
   }
 
@@ -7919,7 +7946,7 @@ svg * {
     background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='19' height='24' viewBox='0 0 19 24' fill='none'%3E%3Cpath d='M0.957468 22.0249L9.30712 19.9653L7.24748 11.6156L15.5971 9.556L13.5375 1.20635' stroke='%23FFD130' stroke-width='4'/%3E%3C/svg%3E") 50%/100% no-repeat;
     width: 19px;
     height: 24px;
-    top: 258px;
+    top: 2px;
     right: 50px;
   }
 
@@ -7927,7 +7954,7 @@ svg * {
     background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='19' viewBox='0 0 24 19' fill='none'%3E%3Cpath d='M0.999896 14.2814L9.41484 16.0556L11.189 7.64062L19.6039 9.41473L21.378 0.999784' stroke='%23FFD130' stroke-width='4'/%3E%3C/svg%3E") 50%/100% no-repeat;
     width: 24px;
     height: 19px;
-    top: 279px;
+    top: 20px;
     right: 17px;
   }
 
@@ -7944,8 +7971,12 @@ svg * {
     width: 87px;
     height: 87px;
     left: 16px;
-    top: 165px;
+    top: -90px;
     bottom: unset;
+  }
+
+  .page_error__tringle {
+    display: none;
   }
 
   .page_error__leafl {

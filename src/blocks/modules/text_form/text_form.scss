@@ -20,6 +20,14 @@
                 flex-direction: column;
             }
         }
+        &.isSent {
+            .wpcf7 {
+                display: none;
+            }
+            .block_form__done {
+                display: block;
+            }
+        }
     }
     &__line {
         position: absolute;
@@ -75,15 +83,19 @@
     }
     &__r-side {
         width: calc(50% - vw(80));
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        align-items: flex-start;
         position: relative;
         z-index: 2;
+        p {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            @media all and (max-width: 1023px) {
+                flex-direction: column;
+            }
+        }
         @media all and (max-width: 1023px) {
             width: 100%;
-            flex-direction: column;
         }
     }
     &__title {
@@ -99,6 +111,9 @@
             margin-bottom: 24px;
         }
     }
+    &__done {
+        display: none;
+    }
     &__text {
         margin-bottom: vw(40);
         color: #FFF;
@@ -111,10 +126,17 @@
             font-size: 24px;
         }
     }
+    .wpcf7-form-control-wrap {
+        width: calc(50% - vw(15));
+        margin-bottom: vw(35);
+        @media all and (max-width: 1023px) {
+            width: 100%;
+            margin-bottom: 24px;
+        }
+    }
     input {
         &[type="text"], &[type="tel"] {
-            width: calc(50% - vw(15));
-            margin-bottom: vw(35);
+            width: 100%;
             border-radius: 4px;
             border: 0;
             padding: vw(15) vw(30);
@@ -125,8 +147,6 @@
             height: vw(50);
             line-height: normal;
             @media all and (max-width: 1023px) {
-                width: 100%;
-                margin-bottom: 24px;
                 font-size: 16px;
                 height: 50px;
                 padding: 15px 30px;
